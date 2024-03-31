@@ -1,0 +1,11 @@
+{
+  "header": [
+    "Trattamenti",
+    "Corsi",
+    "Attivita'",
+    "About"
+  ],
+  "buttons": {
+    "header-button": "Area Riservata"
+  }
+}
