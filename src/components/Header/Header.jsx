@@ -1,10 +1,11 @@
 import React from "react";
-import logo from "../assets/logo-192.png";
-import {ReactComponent as ArrowRight} from "../assets/arrow-right.svg"
-import messages from "../messages/messages.json";
-import Item from "./Item";
-import {ButtonSmall} from "./Button/Button";
-import Image from "./Image";
+import logo from "../../assets/logo-192.png";
+import {ReactComponent as ArrowRight} from "../../assets/arrow-right.svg"
+import messages from "../../messages/messages.json";
+import Item from "../Item";
+import {ButtonSmall} from "../Button/Button";
+import Image from "../Image";
+import "./header.css"
 
 const Header = () => {
   return (
