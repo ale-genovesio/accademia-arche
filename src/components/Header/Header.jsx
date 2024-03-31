@@ -4,7 +4,7 @@ import {ReactComponent as ArrowRight} from "../../assets/arrow-right.svg"
 import messages from "../../messages/messages.json";
 import Item from "../Item";
 import {ButtonSmall} from "../Button/Button";
-import Image from "../Image";
+import Image from "../Image/Image";
 import "./header.css"
 
 const Header = () => {
