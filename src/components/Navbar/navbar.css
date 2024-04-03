@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+}
+
+.navbar {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.left-navbar {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 48px;
+}
+
+.text-navbar {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blue-text {
+    color: #0068ff;
+}
+
+.h1-navbar {
+    margin: 0;
+    font-weight: 400;
+    font-size: 40px;
+
+}

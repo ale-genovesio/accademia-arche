@@ -6,6 +6,14 @@
     "About"
   ],
   "buttons": {
-    "header-button": "Area Riservata"
+    "header-button": "Area riservata",
+    "label-button": "Scopri di più o prenota"
+  },
+  "label": {
+    "left-label": "Benvenuti!",
+    "rigth-label": "Trattamento osteopatico"
+  },
+  "description": {
+    "label-description": "Trattamento osteopatico - Tecniche osteopatiche olistiche"
   }
 }
