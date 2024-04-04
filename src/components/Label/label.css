@@ -9,3 +9,18 @@
     width: fit-content;
     color: #0068ff;
 }
+
+.label-with-circle {
+    border-radius: 80px;
+    padding: 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F6F9;
+    height: fit-content;
+    width: fit-content;
+    gap: 16px;
+    position: absolute;
+    bottom: 100px;
+    z-index: 3;
+}

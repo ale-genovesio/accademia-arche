@@ -6,6 +6,7 @@ import { ButtonSmall } from "../Button/Button";
 import Text from "../Text/Text";
 import Image from "../Image/Image";
 import "./navbar.css"
+import navImage from "../../assets/nav-image.png"
 
 const Navbar = () => {
     return (
@@ -18,9 +19,12 @@ const Navbar = () => {
                 </div>
                 <ButtonSmall Icon={ArrowRight} message={messages?.buttons?.["label-button"]} isInverted={true} />
             </div>
-            <div className="rigth-navbar">
-                <Image></Image>
-                <Label></Label>
+            <div className="right-navbar">
+                <div className="container-nav-image">
+                    <Image src = {navImage} className={"nav-image"}></Image>
+                </div>
+                <div className="square"></div>
+                <Label message={messages?.label?.["right-label"]} classNameLabel={"label-with-circle"} circle = {"circle"}></Label>
             </div>
         </div>
     );

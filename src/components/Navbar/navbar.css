@@ -1,5 +1,6 @@
 .navbar {
     display: flex;
+    gap: 100px;
 }
 
 .navbar {
@@ -11,7 +12,7 @@
 }
 
 .left-navbar {
-    padding-top: 40px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -33,4 +34,36 @@
     font-weight: 400;
     font-size: 40px;
 
+}
+
+.circle {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #0068ff;
+}
+
+.right-navbar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav-image {
+    position: relative;
+    height: 500px;
+    width: 400px;
+    z-index: 2;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: #0068ff;
+    opacity: 20%;
+    position: absolute;
+    border-radius: 20%;
+    top: 50px;
+    right: 45px;
+    z-index: 1;
 }
