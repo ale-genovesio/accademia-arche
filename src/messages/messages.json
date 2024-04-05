@@ -14,6 +14,8 @@
     "right-label": "Trattamento osteopatico"
   },
   "description": {
-    "label-description": "Trattamento osteopatico - Tecniche osteopatiche olistiche"
+    "label-description": "Trattamento osteopatico - Tecniche osteopatiche olistiche",
+    "title-description-description": "Scegli le tipologia di trattamenti",
+    "text-description-description": "Il metodo permette di trattare molti disturbi e problematiche quali: cervicalgia, lombalgia, sciatalgia, dolori muscolari e articolari (anche in seguito a traumi e/o interventi), problemi digestivi, problemi viscerali in generale, disfunzioni cranio-sacrali, emicrania, ecc…"
   }
 }

@@ -1,0 +1,15 @@
+.description {
+    display: flex;
+    align-items: center;
+}
+
+.desc-left {
+    font-weight: 500;
+    width: 40%;
+}
+
+.desc-right {
+    text-align: end;
+    width: 60%;
+    margin-left: 200px;
+}
