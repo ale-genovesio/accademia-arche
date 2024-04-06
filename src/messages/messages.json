@@ -7,7 +7,8 @@
   ],
   "buttons": {
     "header-button": "Area riservata",
-    "label-button": "Scopri di più o prenota"
+    "label-button": "Scopri di più o prenota",
+    "low-description-button": "Scopri tutti i vantagg"
   },
   "label": {
     "left-label": "Benvenuti!",
@@ -36,6 +37,20 @@
       "description": "Il trattamento viene eseguito su tutto il corpo, focalizzandosi sui muscoli o sulle aree che necessitano di maggior intervento. Le tecniche non sono invasive e portano a un riequilibrio e a un rilassamento mio-fasciale globale. ",
       "doc": "Caradonna Alessandra - 340 4286825",
       "price": "40 €"
+    }
+  ],
+  "advantages": [
+    {
+      "title": "Beneficio 1",
+      "description": "Il metodo permette di trattare molti disturbi"
+    },
+    {
+      "title": "Beneficio 2",
+      "description": "Il metodo permette di trattare molti disturbi"
+    },
+    {
+      "title": "Beneficio 3",
+      "description": "Il metodo permette di trattare molti disturbi"
     }
   ]
 }

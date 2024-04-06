@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar/Navbar";
 import Description from "./components/Description/Description";
 import Card from "./components/Card/Card";
+import LowDescription from "./components/LowDescription/LowDescription";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar/>
       <Description/>
       <Card></Card>
+      <LowDescription></LowDescription>
       <BrowserRouter>
         <Routes>
           <Route index element={<Homepage />} />
