@@ -17,5 +17,25 @@
     "label-description": "Trattamento osteopatico - Tecniche osteopatiche olistiche",
     "title-description-description": "Scegli le tipologia di trattamenti",
     "text-description-description": "Il metodo permette di trattare molti disturbi e problematiche quali: cervicalgia, lombalgia, sciatalgia, dolori muscolari e articolari (anche in seguito a traumi e/o interventi), problemi digestivi, problemi viscerali in generale, disfunzioni cranio-sacrali, emicrania, ecc…"
-  }
+  },
+  "card": [
+    {
+      "title": "Trattamento Cranio Sacrale",
+      "description": "Mediante leggere manipolazioni, quasi impercettibili per il soggetto, l’operatore interagisce con il sistema cranio sacrale in modo da riportarlo in equilibrio ed eliminare le eventuali disfunzioni riscontrate. ",
+      "doc": "Dott. Ghio Federico - 340 0908267",
+      "price": "60 €"
+    },
+    {
+      "title": "Rieducazione funzionale",
+      "description": "La Rieducazione Funzionale è un insieme di trattamenti (compresi esercizi fisici) che hanno l’obiettivo di far tornare il soggetto alle normali attività quotidiane e/o sportive, in seguito a un trauma e/o a un intervento chirurgico. ",
+      "doc": "Dott. Ghio Federico - 340 0908267",
+      "price": "50 €"
+    },
+    {
+      "title": "Trattamento dei Trigger Points",
+      "description": "Il trattamento viene eseguito su tutto il corpo, focalizzandosi sui muscoli o sulle aree che necessitano di maggior intervento. Le tecniche non sono invasive e portano a un riequilibrio e a un rilassamento mio-fasciale globale. ",
+      "doc": "Caradonna Alessandra - 340 4286825",
+      "price": "40 €"
+    }
+  ]
 }

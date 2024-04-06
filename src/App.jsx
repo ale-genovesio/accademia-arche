@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar/Navbar";
 import Description from "./components/Description/Description";
+import Card from "./components/Card/Card";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Navbar/>
       <Description/>
+      <Card></Card>
       <BrowserRouter>
         <Routes>
           <Route index element={<Homepage />} />
