@@ -1,0 +1,25 @@
+.service {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 48px;
+    column-gap: 40px;
+    padding: 0 2rem;
+}
+
+.pattern {
+    height: 140px;
+    width: 200px;
+
+}
+
+.service-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

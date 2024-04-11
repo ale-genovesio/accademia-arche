@@ -17,7 +17,11 @@
   "description": {
     "label-description": "Trattamento osteopatico - Tecniche osteopatiche olistiche",
     "title-description-description": "Scegli le tipologia di trattamenti",
-    "text-description-description": "Il metodo permette di trattare molti disturbi e problematiche quali: cervicalgia, lombalgia, sciatalgia, dolori muscolari e articolari (anche in seguito a traumi e/o interventi), problemi digestivi, problemi viscerali in generale, disfunzioni cranio-sacrali, emicrania, ecc…"
+    "text-description-description": "Il metodo permette di trattare molti disturbi e problematiche quali: cervicalgia, lombalgia, sciatalgia, dolori muscolari e articolari (anche in seguito a traumi e/o interventi), problemi digestivi, problemi viscerali in generale, disfunzioni cranio-sacrali, emicrania, ecc…",
+    "text-low": "Lavoriamo per te e perché tu possa vivere al meglio ed esprimere le tue potenzialità. Cerchiamo, nel miglior modo possibile, di farti stare bene dal primo ingresso fino a quando esci dallo Studio.",
+    "text-low-two": "Per noi è importante la relazione con la persona, la competenza professionale, l’aggiornamento continuo e la tua sicurezza.",
+    "text-low-three": " L’obiettivo che ci sta più a cuore è quello di prevenire e risolvere i problemi, prendendoci cura della tua persona in modo davvero olistico, ovvero a 360 gradi. NON eseguiamo tecniche thrust (quelle che fanno “scrocchiare”), ma esclusivamente tecniche manipolative dolci e non invasive.",
+    "text-low-for": " Questo perché vogliamo che da noi tu possa vivere un’esperienza piacevole."
   },
   "card": [
     {
@@ -51,6 +55,54 @@
     {
       "title": "Beneficio 3",
       "description": "Il metodo permette di trattare molti disturbi"
+    }
+  ],
+  "services": [
+    {
+      "title": "Trattamenti Osteopatici Dos-Dbn",
+      "description": "In questo contesto e, considerato quanto detto in precedenza, la Scuola di Formazione Integrata Accademia Archè ha ottenuto l’accreditamento per istituire un corso di osteopatia denominato “Scienze Osteopatiche Olistiche”, mediante un iter di controllo e vaglio dei programmi formativi, delle modalità di erogazione e delle competenze dei docenti."
+    },
+    {
+      "title": "Visite Mediche per certificato sportivo non agonistico",
+      "description": "L’Accademia Archè propone una vasta gamma di attività legate al benessere e alle Discipline Bionaturali, affinché ognuno di voi possa trovare il modo migliore e più adatto alle sue corde per mantenersi in salute e prevenire eventuali problematiche e/o patologie."
+    },
+    {
+      "title": "Rieducazione Funzionale",
+      "description": "A causa dello stile di vita a cui siamo abituati possiamo passare molte ore, spesso anche alcuni giorni senza contatto fisico. Ciò può avere un impatto molto negativo sulla nostra salute, molto più di quello che possiamo immaginare."
+    },
+    {
+      "title": "Trattamenti Osteopatici Dos-Dbn",
+      "description": "In questo contesto e, considerato quanto detto in precedenza, la Scuola di Formazione Integrata Accademia Archè ha ottenuto l’accreditamento per istituire un corso di osteopatia denominato “Scienze Osteopatiche Olistiche”, mediante un iter di controllo e vaglio dei programmi formativi, delle modalità di erogazione e delle competenze dei docenti."
+    },
+    {
+      "title": "Visite Mediche per certificato sportivo non agonistico",
+      "description": "L’Accademia Archè propone una vasta gamma di attività legate al benessere e alle Discipline Bionaturali, affinché ognuno di voi possa trovare il modo migliore e più adatto alle sue corde per mantenersi in salute e prevenire eventuali problematiche e/o patologie."
+    },
+    {
+      "title": "Rieducazione Funzionale",
+      "description": "A causa dello stile di vita a cui siamo abituati possiamo passare molte ore, spesso anche alcuni giorni senza contatto fisico. Ciò può avere un impatto molto negativo sulla nostra salute, molto più di quello che possiamo immaginare."
+    }
+  ],
+  "footer": [
+    {
+      "title": "Giorni e orari segreteria didattica",
+      "description": "Lunedì: 15.00-19.00",
+      "descriptiontwo": "Martedì-Venerdì: 10.00-13.00 / 15.00-19.00",
+      "descriptionthree": "Sabato: 10.00-12.30"
+    },
+    {
+      "title": "Giorni e orari studio trattamenti",
+      "description": "Martedì-Venerdì: 9.00-13.00 / 15.00-19.00",
+      "descriptiontwo": "In caso di necessità di prenotazione in giorni e orari non disponibili in agenda puoi contattare direttamente lo Studio al numero: 340 0908267"
+    },
+    {
+      "title": "Indirizzo",
+      "description": "Corso Unione Sovietica 415/D, 10135, Torino"
+    },
+    {
+      "title": "Contatti",
+      "description": "Cel: 340 0908267",
+      "descriptiontwo": "E-mail: info@accademia-arche.it"
     }
   ]
 }

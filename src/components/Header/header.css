@@ -6,12 +6,18 @@
 
 .header {
     display: flex;
+    background-color: #fff;
+    padding: 10px 2rem;
     justify-content: space-between;
     align-items: center;
     font-family: "Urbanist", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 1px 1px 10px gray;
 }
 
 .container-header-item {

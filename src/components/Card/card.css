@@ -1,12 +1,9 @@
 .card {
     display: flex;
     gap: 20px;
+    padding: 0 2rem;
 }
 
-.card :hover {
-    background-color: #0068ff;
-    color: #fff;
-}
 
 .single-card {
     padding: 20px;
@@ -17,7 +14,12 @@
     transition: all 0.5s;
 }
 
-.card :hover .heart {
+.single-card:hover {
+    background-color: #0068ff;
+    color: #fff;
+}
+
+.single-card:hover .heart {
     fill: #fff;
 
 }

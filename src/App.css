@@ -1,19 +1,8 @@
 /* scrivere css per ogni componente (modulo css) */
 
 .App {
-  height: 100vh;
-  padding: 20px 100px;
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
-/* 
-.header {
-  height: 10vh;
-}
-
-.navbar {
-  height: 30vh;
-} */
