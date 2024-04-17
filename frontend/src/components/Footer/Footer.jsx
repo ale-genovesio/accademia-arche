@@ -14,20 +14,20 @@ const Footer = () => {
     <div className="footer">
         <div className="top-footer">
         {messages.footer.map((f) => <div className="sigle-footer-text">
-            <h3><Text message ={f.title}/></h3>
-            <Text message ={f.description}/>
-            <Text message ={f.descriptiontwo}/>
-            <Text message ={f.descriptionthree}/>
+            <h3><Text classNameText={"footer-text"} message ={f.title}/></h3>
+            <Text classNameText={"footer-text"} message ={f.description}/>
+            <Text classNameText={"footer-text"} message ={f.descriptiontwo}/>
+            <Text classNameText={"footer-text"} message ={f.descriptionthree}/>
         </div>)}
         </div>
     <div className="bottom-footer">
     <Image src={logo} className={"header-logo"} />
     <p>P.IVA Studio: 12768540010 | C.F. Ass.ne: 95217170109</p>
         <div className="social">
-            <div className="social-icon"><Image src={facebook}/></div>
-            <div className="social-icon"><Image src={insta}/></div>
-            <div className="social-icon"><Image src={telegram}/></div>
-            <div className="social-icon"><Image src={mail}/></div>
+            <div className="social-icon"><a href="https://www.facebook.com/AccademiaArche"><Image src={facebook}/></a></div>
+            <div className="social-icon"><a href="https://www.instagram.com/federico_ghio_osteopata/"><Image src={insta}/></a></div>
+            <div className="social-icon"><a href="https://web.telegram.org/k/"><Image src={telegram}/></a></div>
+            <div className="social-icon"><a href="mailto:info@accademia-arche.it"><Image src={mail}/></a></div>
             
         </div>
     </div>

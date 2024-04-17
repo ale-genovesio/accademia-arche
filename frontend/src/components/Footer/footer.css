@@ -4,7 +4,7 @@
     flex-direction: column;
     padding: 1rem 2rem;
     color: #fff;
-    font-size: 10px;
+    font-size: 13px;
 
 }
 
@@ -48,4 +48,8 @@
 .social {
     display: flex;
     gap: 10px;
+}
+
+.footer-text {
+    margin: 5px;
 }

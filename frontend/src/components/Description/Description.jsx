@@ -10,7 +10,7 @@ const Description = () => {
             <div className="desc-right">
                 <Text message={messages?.description?.["text-description-description"]} />
                 {/* SISTEMARE IL LINK NELLA PAGINA GIUSTA */}
-                <a href="Homepage">Scopri di piu'</a>
+                <a href="/">Scopri di piu'</a>
 
             </div>
         </div>

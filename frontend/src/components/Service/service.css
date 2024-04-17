@@ -1,10 +1,18 @@
-.service {
+.services {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 48px;
-    column-gap: 40px;
+    grid-template-rows: 450px 450px;
+    grid-template-columns: auto auto auto;
+    row-gap: 5rem;
+    column-gap: 3rem;
     padding: 0 2rem;
+    justify-content: center;
+}
+
+.service {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .pattern {
@@ -18,8 +26,33 @@
     justify-content: flex-end;
 }
 
+.service-button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 .title-service {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+}
+
+.h1-service {
+    font-weight: 500;
+}
+
+.single-service {
+    position: relative;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

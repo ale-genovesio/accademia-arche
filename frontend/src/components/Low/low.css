@@ -1,3 +1,11 @@
 .low {
-    padding: 0 2rem;
+    padding: 2rem 2rem;
+}
+
+.h1-low {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }

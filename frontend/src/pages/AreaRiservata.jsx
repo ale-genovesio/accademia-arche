@@ -6,7 +6,7 @@ const AreaRiservata = () => {
         <h1>Area riservata</h1>
         <p>Il contenuto è protetto da password. Per visualizzarlo inserisci di seguito la password:</p>
         <div>
-        <input type="text" />
+        <input type="password" />
         <button type="submit">Accedi</button>
     </div>
     </div>;

@@ -21,5 +21,28 @@
 
 .single-card:hover .heart {
     fill: #fff;
+}
 
+.single-card:hover .button-round-inverted {
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.single-card:hover .button-round-inverted:hover {
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.single-card:hover .button-round-inverted svg {
+    fill: #fff;
+}
+
+.single-card:hover .button-round-inverted:hover svg {
+    fill: #0068ff;
+}
+
+.price-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

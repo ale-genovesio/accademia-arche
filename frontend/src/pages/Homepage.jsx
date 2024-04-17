@@ -9,14 +9,14 @@ import Low from "../components/Low/Low";
 
 const Homepage = () => {
   return (
-    <>
+    <div className="homepage">
       <Navbar />
       <Description />
       <Card></Card>
       <LowDescription></LowDescription>
       <Service />
       <Low/> 
-      </>
+      </div>
   )
 };
 
