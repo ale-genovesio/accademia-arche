@@ -15,7 +15,7 @@ const Header = () => {
       <Link to="/" className="link"><Image src={logo} className={"header-logo"} /></Link>
       <div className="container-header-item">
         {messages.header.map((itemMessage) => (
-          <Item message={itemMessage} classNameItem={"header-item"} />
+          <Item message={itemMessage.label} link={itemMessage.link} classNameItem={"header-item"} />
         ))}
       </div>
       <div className="container-header-button">

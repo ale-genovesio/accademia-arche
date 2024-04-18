@@ -1,0 +1,13 @@
+.download-card {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.download-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+}

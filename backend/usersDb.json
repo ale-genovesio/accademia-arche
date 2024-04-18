@@ -1,0 +1,27 @@
+{
+    "users": [
+        {
+            "email": "ciao",
+            "token": "Xqn0EHVr8KqyhXzAA5HK2",
+            "courses": [],
+            "treatments": [],
+            "id": 1
+        },
+        {
+            "email": "ciaoooo",
+            "token": "SvFiudTFUty0Hlj1gKXW3",
+            "courses": [],
+            "treatments": [],
+            "id": 2
+        },
+        {
+            "email": "ale.ge@gmail.com",
+            "id": 3
+        },
+        {
+            "email": "alee.1@gmail.com",
+            "id": 4,
+            "token": "XCrxYhiimpyHIC60B6S-A"
+        }
+    ]
+}

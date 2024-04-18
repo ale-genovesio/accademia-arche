@@ -1,14 +1,27 @@
 {
   "header": [
-    "Trattamenti",
-    "Corsi",
-    "Attivita'",
-    "About"
+    {
+      "label": "Trattamenti",
+      "link": "/trattamenti"
+    },
+    {
+      "label": "Corsi",
+      "link": "/corsi"
+    },
+    {
+      "label": "Attivitá",
+      "link": "/attivita"
+    },
+    {
+      "label": "About",
+      "link": "/about"
+    }
   ],
   "buttons": {
     "header-button": "Area riservata",
     "label-button": "Scopri di più o prenota",
-    "low-description-button": "Scopri tutti i vantagg"
+    "low-description-button": "Scopri tutti i vantaggi",
+    "area-riservata-download": "Scarica lezione"
   },
   "label": {
     "left-label": "Benvenuti!",

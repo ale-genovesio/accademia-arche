@@ -1,0 +1,78 @@
+{
+    "password": [
+        {
+            "courseId": 1,
+            "pass": "qwerty"
+        },
+        {
+            "courseId": 2,
+            "pass": "ytrewq"
+        },
+        {
+            "courseId": 3,
+            "pass": "12345"
+        }
+    ],
+    "course": [
+        {
+            "id": 1,
+            "name": "Miro",
+            "pdf": [
+                {
+                    "type": "",
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "type": "",
+                    "name": "",
+                    "link": ""
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Cranio Sacrale",
+            "pdf": [
+                {
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "name": "",
+                    "link": ""
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Massaggio Olistiche con Tecniche Miro",
+            "pdf": [
+                {
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "name": "",
+                    "link": ""
+                },
+                {
+                    "name": "",
+                    "link": ""
+                }
+            ]
+        }
+    ]
+}

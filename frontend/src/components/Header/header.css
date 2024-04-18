@@ -30,6 +30,8 @@
     align-items: center;
     display: flex;
     font-weight: 500;
+    color: #000;
+
 }
 
 .header-item:hover {

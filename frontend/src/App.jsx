@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import AreaRiservata from "./pages/AreaRiservata";
 import AccessoAreaRiservata from "./pages/AccessoAreaRiservata";
 import Footer from "./components/Footer/Footer";
+import Courses from "./pages/Courses";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route index element={<Homepage />} />
             <Route path="/areariservata" element={<AreaRiservata />} />
             <Route path="/accesso-areariservata" element={<AccessoAreaRiservata />} />
+            <Route path="/corsi" element={<Courses />} />
           </Routes>
         <Footer/>
       </BrowserRouter>
