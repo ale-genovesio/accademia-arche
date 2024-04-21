@@ -1,9 +1,9 @@
 import React from "react";
 import "./button.css"
 
-export const ButtonSmall = ({ message, isInverted, Icon }) => {
+export const ButtonSmall = ({ message, isInverted, Icon, onClick }) => {
   return (
-    <button className={isInverted ? "button-small-inverted" : "button-small"}>
+    <button className={isInverted ? "button-small-inverted" : "button-small"} onClick={onClick}>
       <span>{message}</span>
       {Icon && <Icon/>}
     </button>

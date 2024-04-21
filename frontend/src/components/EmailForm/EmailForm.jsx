@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 
-const EmailForm = ({ setLoggedInToken }) => {
+const EmailForm = ({ setLoggedInToken, setUserCourses }) => {
     const [email,  setEmail] = useState("")
 
     const handleSubmit =  (e) => {
@@ -18,7 +18,9 @@ const EmailForm = ({ setLoggedInToken }) => {
         }),
     }).then(res => res.json()).then((json) => {
         localStorage.setItem("loggedInToken", json.token);
-        setLoggedInToken(json.token)
+        localStorage.setItem("userCourses", JSON.stringify(json.courses));
+        setLoggedInToken(json.token);
+        setUserCourses(json.courses)
     })
         }
     }

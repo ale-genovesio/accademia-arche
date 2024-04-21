@@ -2,6 +2,9 @@
 import { nanoid } from "nanoid";
 import fs from "node:fs/promises";
 
+const omit = (obj, arr) =>
+    Object.fromEntries(Object.entries(obj).filter(([k]) => !arr.includes(k)));
+
 
 
 export const readUsersDb = async () => {
@@ -22,14 +25,35 @@ export const createUser = async (req, res) => {
     if (userIsValid(req.body) && !emailExist) {
         req.body.id = userId;
         req.body.token = nanoid()
+        req.body.courses = []
         db.users.push(req.body);
         await fs.writeFile("./usersDb.json", JSON.stringify(db));
-        res.status(201).json({ status: "ok", token: req.body.token });
+        res.status(201).json({ status: "ok", token: req.body.token, courses: req.body.courses });
         userId++;
     } else {
-        res.status(400).json({ status: "email giá esistente" });
+        const user = db.users.find(user => user.email === req.body.email)
+        res.status(200).json({ status: "ok", token: user.token, courses: user.courses });
     }
 };
+
+export const subscribeUserToCourse = async (req, res) => {
+    let db = await readUsersDb();
+    if (tokenIsValid(db.users, req.body.token)) {
+        console.log(db.users.find(user => user.token === req.body.token))
+        const currentUser = db.users.find(user => user.token === req.body.token)
+        currentUser.courses.push(omit(req.body, "token"));
+        await fs.writeFile("./usersDb.json", JSON.stringify(db));
+        res.status(201).json({ status: "ok", courses: currentUser.courses });
+    } else {
+        res.status(400).json({ status: "email non esistente" });
+    }
+};
+
+const tokenIsValid = (users, token) => {
+    return (
+        users.find(user => user.token === token)
+    )
+}
 
 const userIsValid = (users) => {
     return (
