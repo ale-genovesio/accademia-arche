@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import "./areariservata.css"
 import { useNavigate } from "react-router-dom";
+import EmailForm from "../components/EmailForm/EmailForm";
 
 
-const AreaRiservata = () => {
+const AreaRiservata = ({loggedInToken, setLoggedInToken}) => {
     const navigate = useNavigate();
     const [password, setPassword] = useState("")
     
@@ -28,15 +29,25 @@ const AreaRiservata = () => {
     }
    
     
-    return <div className="area-riservata"> 
-        <h1>Area riservata</h1>
-        <p>Il contenuto è protetto da password. Per visualizzarlo inserisci di seguito la password:</p>
+    return <div> 
+
+        <div>
+        {loggedInToken ? 
+                    <>Lista dei corsi a cui lútente e'iscritto</>
+                :
+                <EmailForm setLoggedInToken={setLoggedInToken}/>
+        }
+        </div>
+
+    <div className="area-riservata">
+        <h1>Accedi per scaricare i contenuti dei tuoi corsi</h1>
+        <p>La password per accedere ai contenuti dei tuoi corsi é quella fornita dal personale alla fine del corso che hai frequentato</p>
         <div>
             <form action="" onSubmit={(e) =>handleSubmit(e)}> 
-             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <button type="submit">Accedi</button>
-        </form>
-      
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <button type="submit">Accedi</button>
+            </form>
+        </div>
     </div>
 
     </div>

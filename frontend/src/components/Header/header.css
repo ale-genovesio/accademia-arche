@@ -26,6 +26,12 @@
     justify-content: space-around;
 }
 
+.container-header-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .header-item {
     align-items: center;
     display: flex;

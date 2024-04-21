@@ -15,64 +15,236 @@
     ],
     "course": [
         {
-            "id": 1,
+            "id": "miro",
             "name": "Miro",
+            "day": "lunedì",
+            "description": "Lorem ipsum",
+            "image": "https://www.accademia-arche.it/wp-content/uploads/2022/06/260717474_2820464194918565_902211039173723263_n-640x372.jpg",
+            "hours": [
+                "10.00 - 12.00",
+                "14.00 - 16.00"
+            ],
             "pdf": [
                 {
-                    "type": "",
-                    "name": "",
+                    "name": "1-Piede",
                     "link": ""
                 },
                 {
-                    "type": "",
-                    "name": "",
+                    "name": "2-Tibia e Perone",
+                    "link": ""
+                },
+                {
+                    "name": "3-Ginocchio",
+                    "link": ""
+                },
+                {
+                    "name": "4-Anca",
+                    "link": ""
+                },
+                {
+                    "name": "5-Bacino",
+                    "link": ""
+                },
+                {
+                    "name": "6-Sacro",
+                    "link": ""
+                },
+                {
+                    "name": "7-Rachide",
+                    "link": ""
+                },
+                {
+                    "name": "8-Clavicola",
+                    "link": ""
+                },
+                {
+                    "name": " 9-Scapola",
+                    "link": ""
+                },
+                {
+                    "name": "10-Scapolo-Omerale",
+                    "link": ""
+                },
+                {
+                    "name": "11-Gomito",
+                    "link": ""
+                },
+                {
+                    "name": "12-Polso",
+                    "link": ""
+                },
+                {
+                    "name": "Il Sistema Fasciale in MIRO",
+                    "link": ""
+                },
+                {
+                    "name": "1-2-Fasciale Piede e Gamba",
+                    "link": ""
+                },
+                {
+                    "name": "3-Fasciale Ginocchio",
+                    "link": ""
+                },
+                {
+                    "name": "4-Fasciale Anca",
+                    "link": ""
+                },
+                {
+                    "name": "5-Fasciale Bacino",
+                    "link": ""
+                },
+                {
+                    "name": "6-Fasciale Sacro",
+                    "link": ""
+                },
+                {
+                    "name": "7-Fasciale Rachide",
+                    "link": ""
+                },
+                {
+                    "name": "8-Fasciale Clavicola",
+                    "link": ""
+                },
+                {
+                    "name": "9-Fasciale Scapola",
+                    "link": ""
+                },
+                {
+                    "name": "10-Fasciale Scapolo-Omerale",
+                    "link": ""
+                },
+                {
+                    "name": "11-Fasciale Gomito",
+                    "link": ""
+                },
+                {
+                    "name": "12-Fasciale Polso",
                     "link": ""
                 }
             ]
         },
         {
-            "id": 2,
+            "id": "cranio-sacrale",
             "name": "Cranio Sacrale",
+            "description": "Lorem ipsum",
+            "image": "https://www.accademia-arche.it/wp-content/uploads/2022/06/269042846_632848428149376_8425736810403523215_n-640x372.jpg",
+            "day": "martedì",
+            "hours": [
+                "10.00 - 12.00",
+                "14.00 - 16.00"
+            ],
             "pdf": [
                 {
-                    "name": "",
+                    "name": "Sistema Cranio Sacrale",
                     "link": ""
                 },
                 {
-                    "name": "",
+                    "name": "SSB",
                     "link": ""
                 },
                 {
-                    "name": "",
+                    "name": "Occipite",
                     "link": ""
                 },
                 {
-                    "name": "",
+                    "name": "Frontale",
+                    "link": ""
+                },
+                {
+                    "name": "Frontale Pratica",
+                    "link": ""
+                },
+                {
+                    "name": "Parietale",
+                    "link": ""
+                },
+                {
+                    "name": "Parietale Pratica",
+                    "link": ""
+                },
+                {
+                    "name": "Temporale",
+                    "link": ""
+                },
+                {
+                    "name": "Temporale Pratica",
+                    "link": ""
+                },
+                {
+                    "name": "Etmoide",
+                    "link": ""
+                },
+                {
+                    "name": "Etmoide Pratica",
+                    "link": ""
+                },
+                {
+                    "name": "Vomere",
+                    "link": ""
+                },
+                {
+                    "name": "Vomere Pratica",
+                    "link": ""
+                },
+                {
+                    "name": "Mandibola",
                     "link": ""
                 }
             ]
         },
         {
-            "id": 3,
+            "id": "massaggio-olistico",
             "name": "Massaggio Olistiche con Tecniche Miro",
+            "description": "Lorem ipsum",
+            "image": "https://www.accademia-arche.it/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-12-at-16.45.31-672x372.jpeg",
+            "day": "mercoledì",
+            "hours": [
+                "10.00 - 12.00",
+                "14.00 - 16.00"
+            ],
             "pdf": [
                 {
-                    "name": "",
+                    "name": "Indice Corso I Livello",
                     "link": ""
                 },
                 {
-                    "name": "",
+                    "name": "Elementi di igiene",
                     "link": ""
                 },
                 {
-                    "name": "",
+                    "name": "Manuale Manovre",
                     "link": ""
                 },
                 {
-                    "name": "",
+                    "name": "Modulo 1",
+                    "link": ""
+                },
+                {
+                    "name": "Modulo 2",
+                    "link": ""
+                },
+                {
+                    "name": "Modulo 3",
+                    "link": ""
+                },
+                {
+                    "name": "Modulo 4",
+                    "link": ""
+                },
+                {
+                    "name": "Modulo 5",
                     "link": ""
                 }
             ]
+        }
+    ],
+    "treatments": [
+        {
+            "id": "trattamento1",
+            "name": "Trattamento 1",
+            "description": "Lorem ipsum",
+            "editorialHtml": "<div class='injected-html'>Questo é l'html injettato</div> \n <span>Testo a capo</span>",
+            "image": "https://www.accademia-arche.it/wp-content/uploads/2022/06/260717474_2820464194918565_902211039173723263_n-640x372.jpg"
         }
     ]
 }

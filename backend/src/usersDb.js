@@ -24,10 +24,10 @@ export const createUser = async (req, res) => {
         req.body.token = nanoid()
         db.users.push(req.body);
         await fs.writeFile("./usersDb.json", JSON.stringify(db));
-        res.status(201).json({ status: "ok" });
+        res.status(201).json({ status: "ok", token: req.body.token });
         userId++;
     } else {
-        res.status(400).json({ status: "error" });
+        res.status(400).json({ status: "email giá esistente" });
     }
 };
 

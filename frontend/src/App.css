@@ -9,6 +9,6 @@
 }
 
 a {
-  line-height: 0;
+  line-height: auto;
   text-decoration: none;
 }

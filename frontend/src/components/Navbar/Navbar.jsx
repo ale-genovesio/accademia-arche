@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="left-navbar">
-                <Label message={messages?.label?.["left-label"]} classNameLabel={"label"} />
+                <Label message={messages?.label?.["left-label"]} />
                 <div className="text-navbar">
                 <h1 className="h1-navbar">Scopri e prenota i nostri <span className="blue-text">trattamenti osteopatici</span></h1>
                 <Text classNameText={"text-navbar"} message={messages?.description?.["label-description"]} />

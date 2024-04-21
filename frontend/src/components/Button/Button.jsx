@@ -5,7 +5,7 @@ export const ButtonSmall = ({ message, isInverted, Icon }) => {
   return (
     <button className={isInverted ? "button-small-inverted" : "button-small"}>
       <span>{message}</span>
-      <Icon/>
+      {Icon && <Icon/>}
     </button>
   );
 };
@@ -14,7 +14,7 @@ export const ButtonLarge = ({ message, isInverted, Icon }) => {
   return (
     <button className={isInverted ? "button-large-inverted" : "button-large"}>
       <span>{message}</span>
-      <Icon/>
+      {Icon && <Icon/>}
     </button>
   );
 };
