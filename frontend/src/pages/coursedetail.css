@@ -1,7 +1,51 @@
 .selected-date-button {
-    background-color: red;
+    border: 1px solid #0068FF;
+    padding: 5px;
+    margin-right: 10px;
 }
 
 .selected-hour-button {
-    background-color: red;
+    border: 1px solid #0068FF;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.h3-coursedetail {
+    color: #0068FF;
+}
+
+.calendar-selecteddata {
+    border-top: 1px solid rgb(172, 172, 172);
+    padding: 1rem 0;
+    margin: 2rem 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.date-button,
+.hour-button {
+    padding: 5px;
+    border: 1px solid rgb(172, 172, 172);
+    margin-right: 10px;
+}
+
+.coursedetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 20px;
+}
+
+.container-item-coursedetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-submit-coursedetail {
+    margin-top: 2rem;
 }

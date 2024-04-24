@@ -19,9 +19,9 @@ export const ButtonLarge = ({ message, isInverted, Icon }) => {
   );
 };
 
-export const ButtonRound = ({ isInverted, Icon }) => {
+export const ButtonRound = ({ isInverted, Icon, onClick}) => {
   return (
-    <button className={isInverted ? "button-round-inverted" : "button-round"}>
+    <button className={isInverted ? "button-round-inverted" : "button-round"} onClick={onClick}>
       <Icon/>
     </button>
   );

@@ -7,6 +7,7 @@ import Text from "../Text/Text";
 import Image from "../Image/Image";
 import "./navbar.css"
 import navImage from "../../assets/nav-image.png"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -17,7 +18,7 @@ const Navbar = () => {
                 <h1 className="h1-navbar">Scopri e prenota i nostri <span className="blue-text">trattamenti osteopatici</span></h1>
                 <Text classNameText={"text-navbar"} message={messages?.description?.["label-description"]} />
                 </div>
-                <ButtonSmall Icon={ArrowRight} message={messages?.buttons?.["label-button"]} isInverted={true} />
+                <Link to="/trattamenti"><ButtonSmall Icon={ArrowRight} message={messages?.buttons?.["label-button"]} isInverted={true} /></Link>
             </div>
             <div className="right-navbar">
                 <div className="container-nav-image">

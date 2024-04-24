@@ -15,6 +15,7 @@ const Homepage = () => {
       <Card></Card>
       <LowDescription></LowDescription>
       <Service />
+      <div><h1 className="h1-low">La nostra filosofia al tuo servizio</h1></div>
       <Low/> 
       </div>
   )

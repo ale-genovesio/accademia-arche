@@ -16,15 +16,20 @@ app.use(cors(corsOptions))
 import { getAllTreatments, getTreatmentDetail } from "./routes-treatments.js"
 import { getAllCourses, getCourseDetail } from "./routes-courses.js"
 import { passwordAccepted } from "./db.js"
-import { createUser, subscribeUserToCourse } from "./usersDb.js"
+import { createUser, subscribeUserToCourse, removeCourseFromUser, getAllUsers } from "./usersDb.js"
 
-app.post('/accesso-areariservata', passwordAccepted);
-app.post('/user', createUser);
 app.get("/corsi", getAllCourses)
 app.get("/corsi/:id", getCourseDetail)
+app.post("/corsi/iscrizione", subscribeUserToCourse)
+
 app.get("/trattamenti", getAllTreatments)
 app.get("/trattamenti/:id", getTreatmentDetail)
-app.post("/corsi/iscrizione", subscribeUserToCourse)
+
+app.post('/user', createUser);
+app.get("/user", getAllUsers)
+app.delete("/user", removeCourseFromUser)
+
+app.post('/accesso-areariservata', passwordAccepted);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

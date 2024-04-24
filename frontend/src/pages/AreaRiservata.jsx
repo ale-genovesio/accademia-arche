@@ -2,8 +2,10 @@ import React, { useState } from "react"
 import "./areariservata.css"
 import { useNavigate } from "react-router-dom";
 import EmailForm from "../components/EmailForm/EmailForm";
-import Image from "../components/Image/Image";
+/* import Image from "../components/Image/Image"; */
 import { Link } from "react-router-dom";
+import { ButtonRound, ButtonSmall } from "../components/Button/Button";
+import {ReactComponent as Delete} from "../assets/delete.svg"
 
 
 const AreaRiservata = ({loggedInToken, setLoggedInToken, userCourses, setUserCourses}) => {
@@ -58,39 +60,48 @@ const AreaRiservata = ({loggedInToken, setLoggedInToken, userCourses, setUserCou
     
     return <div> 
         {isModalOpen && <div className="modal">
-            <button onClick={() => setIsModalOpen(!isModalOpen)}>X</button>
-            <div>
-                <span>Sei sicuro di volerti disiscrivere dal corso?</span>
-                <button onClick={() => setIsModalOpen(!isModalOpen)}>No</button>
-                <button onClick={handleUnsubscribe}>Si</button>
+            <button className="close-modal" onClick={() => setIsModalOpen(!isModalOpen)}>X</button>
+            <div className="modal-container">
+                <h3 className="text-modal">Sei sicuro di volerti disiscrivere dal corso?</h3>
+                <div className="buttons-modal">
+                    <ButtonSmall message={"NO"} onClick={() => setIsModalOpen(!isModalOpen)}/>
+                    <ButtonSmall message={"SÍ"} onClick={handleUnsubscribe}/>
+                </div>
+                
             </div>
         </div>}
-        <div>
+        <div className="top-areariservata">
         {loggedInToken ? 
-                    <>{userCourses.map(course => 
+                    <div className="container-card-areariservata">
+                        {userCourses.map(course => 
                     <Link to={`/corsi/${course.selectedDatas.id}`}>
-                    <div>
-                        <Image src={course.image}/>
-                        <span>{course.name}</span>
+                    <div className="single-card-areariservata">
+                        <h3>{course.name}</h3>
+                        {/* <Image className={"image-card-arearservata"} src={course.image}/> */}
                         <span>{course.description}</span>
                         <span>{course.selectedDatas.day}</span>
                         <span>{course.selectedDatas.hour}</span>
-                        <button onClick={(e) => {e.preventDefault(); setIsModalOpen(!isModalOpen); setSelectedCourseId(course.selectedDatas.id)}}>Disiscrivimi dal corso</button>
+                        <div className="container-button-card-areariservata">
+                        <ButtonRound isInverted={true} Icon={Delete} onClick={(e) => {e.preventDefault(); setIsModalOpen(!isModalOpen); setSelectedCourseId(course.selectedDatas.id)}}/>
+                        </div>
                     </div>
                     </Link>
-                    )}</>
+                    )}</div>
                 :
                 <EmailForm setLoggedInToken={setLoggedInToken}/>
         }
         </div>
 
-    <div className="area-riservata">
+    <div className="bottom-area-riservata">
         <h1>Accedi per scaricare i contenuti dei tuoi corsi</h1>
         <p>La password per accedere ai contenuti dei tuoi corsi é quella fornita dal personale alla fine del corso che hai frequentato</p>
         <div>
             <form action="" onSubmit={(e) =>handleSubmit(e)}> 
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <button type="submit">Accedi</button>
+                <div className="form-areariservata">
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Inserisci password"/>
+                <ButtonSmall type="submit" message={"Accedi"}/>
+                </div>
+                
             </form>
         </div>
     </div>

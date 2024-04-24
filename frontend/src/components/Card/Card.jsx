@@ -6,6 +6,7 @@ import {ReactComponent as RoundArrow} from "../../assets/round-arrow.svg"
 import { ButtonRound } from "../Button/Button";
 import messages from "../../messages/messages.json";
 import "./card.css"
+import { Link } from "react-router-dom";
 
 const Card = () => {
     return ( 
@@ -18,7 +19,7 @@ const Card = () => {
         <p>{c.doc}</p>
         <div className="price-card"> 
         <h2>{c.price}</h2>
-        <ButtonRound isInverted={true} Icon={RoundArrow}/>
+        <Link to="/trattamenti"><ButtonRound isInverted={true} Icon={RoundArrow}/></Link>
         </div>
        
         </div> )}

@@ -6,6 +6,7 @@ import messages from "../../messages/messages.json";
 import {ReactComponent as RoundArrow} from "../../assets/round-arrow.svg"
 import "./service.css";
 import { ButtonRound } from "../Button/Button";
+import { Link } from "react-router-dom";
 const Service = () => {
     return (
         <div className="service">
@@ -18,7 +19,7 @@ const Service = () => {
                     <h3><Text message={m.title} /></h3>
                     <p><Text message={m.description} /></p>
                     <div className="service-button">
-                    <ButtonRound isInverted={true} Icon={RoundArrow} />
+                    <Link to="/trattamenti"><ButtonRound isInverted={true} Icon={RoundArrow} /></Link>
                     </div>
                 </div>)}
             </div>

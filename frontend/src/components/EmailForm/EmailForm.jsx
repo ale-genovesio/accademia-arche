@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import { ButtonSmall } from "../Button/Button";
+import "./emailform.css"
 
 const EmailForm = ({ setLoggedInToken, setUserCourses }) => {
     const [email,  setEmail] = useState("")
@@ -26,11 +28,19 @@ const EmailForm = ({ setLoggedInToken, setUserCourses }) => {
     }
 
 
-    return <form action="" onSubmit={handleSubmit}>
-    <label htmlFor="">Insert your Email</label>
-    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-    <button type="submit">Submit</button>
-</form>;
+    return (
+    <form  className="emailform" action="" onSubmit={handleSubmit}>
+        <div>
+        <h2>Iscriviti al corso!</h2>
+        <label>Per poterti iscrivere ai corsi o per poter visualizzare quelli a cui sei gia’ iscritto, inserisci la tua mail.</label>
+        </div>
+        <div className="input-button-form">
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input-email-form" placeholder="Inserisci la tua email"/>
+        <ButtonSmall type="submit" message={"Visualizza i tuoi corsi"}/>
+        </div>
+        
+    </form>
+    )
 };
 
 export default EmailForm;

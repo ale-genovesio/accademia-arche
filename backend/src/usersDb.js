@@ -2,6 +2,7 @@
 import { nanoid } from "nanoid";
 import fs from "node:fs/promises";
 
+
 const omit = (obj, arr) =>
     Object.fromEntries(Object.entries(obj).filter(([k]) => !arr.includes(k)));
 
@@ -67,4 +68,50 @@ const userExisist = async (mail) => {
     console.log(users, 'user')
     let sameUser = users.filter((u) => u.email == mail);
     return sameUser.length > 0;
+}
+
+
+export const getAllUsers = async (req, res) => {
+    let foundUsers = [];
+    let db = await readUsersDb();
+    let keys = Object.keys(req.query);
+    console.log(db.users);
+    if (keys.length == 0) {
+        res.json({ status: "ok", users: db.users });
+        return;
+    }
+    for (let i = 0; i < db.users.length; i++) {
+        let user = db.users[i];
+        let count = 0;
+        for (let k = 0; k < keys.length; k++) {
+            let key = keys[k];
+            if (user[key] == req.query[key]) {
+                count++;
+            }
+        }
+    }
+    res.json({ status: "ok", users: foundUsers });
+};
+
+
+
+
+
+
+
+export const removeCourseFromUser = async (req, res) => {
+    let db = await readUsersDb();
+    let user = db.users.find(user => user.token === req.body.token)
+    console.log(user, 'user')
+    if (user) {
+        let courses = db.users.courses
+        console.log(courses, 'courses')
+        let otherCourses = db.users.courses.filter((courseId) => courseId.id != req.params.id);
+        console.log(otherCourses, 'otherCourses')
+        courses = otherCourses
+        await fs.writeFile("./usersDb.json", JSON.stringify(db));
+        res.json({ status: "ok", courses: courses });
+    } else {
+        res.status(404).json({ status: "error" });
+    }
 }
