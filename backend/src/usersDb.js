@@ -50,7 +50,7 @@ export const subscribeUserToCourse = async (req, res) => {
     }
 };
 
-const tokenIsValid = (users, token) => {
+export const tokenIsValid = (users, token) => {
     return (
         users.find(user => user.token === token)
     )
@@ -93,6 +93,16 @@ export const getAllUsers = async (req, res) => {
     res.json({ status: "ok", users: foundUsers });
 };
 
+export const getUserCourses = async (req, res) => {
+    let db = await readUsersDb();
+    let user = db.users.find(user => user.token === req.params.id)
+    if (user) {
+        res.json({ status: "ok", courses: user.courses });
+        return;
+    }
+    res.json({ status: "error", message: "no user found with this token" });
+};
+
 
 
 
@@ -101,16 +111,14 @@ export const getAllUsers = async (req, res) => {
 
 export const removeCourseFromUser = async (req, res) => {
     let db = await readUsersDb();
-    let user = db.users.find(user => user.token === req.body.token)
-    console.log(user, 'user')
+    let users = db.users
+    const user = users.find(user => user.token === req.body.token)
     if (user) {
-        let courses = db.users.courses
-        console.log(courses, 'courses')
-        let otherCourses = db.users.courses.filter((courseId) => courseId.id != req.params.id);
-        console.log(otherCourses, 'otherCourses')
-        courses = otherCourses
+        let userCourses = user.courses
+        userCourses = user.courses.filter((course) => course.selectedDatas.id !== req.body.id);
+        db.users.find(user => user.token === req.body.token).courses = userCourses
         await fs.writeFile("./usersDb.json", JSON.stringify(db));
-        res.json({ status: "ok", courses: courses });
+        res.json({ status: "ok", courses: userCourses });
     } else {
         res.status(404).json({ status: "error" });
     }

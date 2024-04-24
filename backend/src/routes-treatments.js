@@ -35,3 +35,16 @@ export const getTreatmentDetail = async (req, res) => {
         res.status(400).json({ status: `no treatment found with this id: ${req.params.id}` });
     }
 };
+
+export const getSuggestedTreatments = async (req, res) => {
+    let db = await readDb();
+    let suggestedTreatments = db.suggestedTreatments
+    if (suggestedTreatments.length) {
+
+        res.json({ status: "ok", suggestedTreatments: suggestedTreatments });
+
+    }
+    else {
+        res.status(400).json({ status: `no suggested treatments found` });
+    }
+};

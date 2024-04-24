@@ -36,26 +36,6 @@
     "text-low-three": " L’obiettivo che ci sta più a cuore è quello di prevenire e risolvere i problemi, prendendoci cura della tua persona in modo davvero olistico, ovvero a 360 gradi. NON eseguiamo tecniche thrust (quelle che fanno “scrocchiare”), ma esclusivamente tecniche manipolative dolci e non invasive.",
     "text-low-for": " Questo perché vogliamo che da noi tu possa vivere un’esperienza piacevole."
   },
-  "card": [
-    {
-      "title": "Trattamento Cranio Sacrale",
-      "description": "Mediante leggere manipolazioni, quasi impercettibili per il soggetto, l’operatore interagisce con il sistema cranio sacrale in modo da riportarlo in equilibrio ed eliminare le eventuali disfunzioni riscontrate. ",
-      "doc": "Dott. Ghio Federico - 340 0908267",
-      "price": "60 €"
-    },
-    {
-      "title": "Rieducazione funzionale",
-      "description": "La Rieducazione Funzionale è un insieme di trattamenti (compresi esercizi fisici) che hanno l’obiettivo di far tornare il soggetto alle normali attività quotidiane e/o sportive, in seguito a un trauma e/o a un intervento chirurgico. ",
-      "doc": "Dott. Ghio Federico - 340 0908267",
-      "price": "50 €"
-    },
-    {
-      "title": "Trattamento dei Trigger Points",
-      "description": "Il trattamento viene eseguito su tutto il corpo, focalizzandosi sui muscoli o sulle aree che necessitano di maggior intervento. Le tecniche non sono invasive e portano a un riequilibrio e a un rilassamento mio-fasciale globale. ",
-      "doc": "Caradonna Alessandra - 340 4286825",
-      "price": "40 €"
-    }
-  ],
   "advantages": [
     {
       "title": "Beneficio 1",
@@ -72,27 +52,27 @@
   ],
   "services": [
     {
-      "title": "Trattamenti Osteopatici Dos-Dbn",
+      "name": "Trattamenti Osteopatici Dos-Dbn",
       "description": "In questo contesto e, considerato quanto detto in precedenza, la Scuola di Formazione Integrata Accademia Archè ha ottenuto l’accreditamento per istituire un corso di osteopatia denominato “Scienze Osteopatiche Olistiche”, mediante un iter di controllo e vaglio dei programmi formativi, delle modalità di erogazione e delle competenze dei docenti."
     },
     {
-      "title": "Visite Mediche per certificato sportivo non agonistico",
+      "name": "Visite Mediche per certificato sportivo non agonistico",
       "description": "L’Accademia Archè propone una vasta gamma di attività legate al benessere e alle Discipline Bionaturali, affinché ognuno di voi possa trovare il modo migliore e più adatto alle sue corde per mantenersi in salute e prevenire eventuali problematiche e/o patologie."
     },
     {
-      "title": "Rieducazione Funzionale",
+      "name": "Rieducazione Funzionale",
       "description": "A causa dello stile di vita a cui siamo abituati possiamo passare molte ore, spesso anche alcuni giorni senza contatto fisico. Ciò può avere un impatto molto negativo sulla nostra salute, molto più di quello che possiamo immaginare."
     },
     {
-      "title": "Trattamenti Osteopatici Dos-Dbn",
+      "name": "Trattamenti Osteopatici Dos-Dbn",
       "description": "In questo contesto e, considerato quanto detto in precedenza, la Scuola di Formazione Integrata Accademia Archè ha ottenuto l’accreditamento per istituire un corso di osteopatia denominato “Scienze Osteopatiche Olistiche”, mediante un iter di controllo e vaglio dei programmi formativi, delle modalità di erogazione e delle competenze dei docenti."
     },
     {
-      "title": "Visite Mediche per certificato sportivo non agonistico",
+      "name": "Visite Mediche per certificato sportivo non agonistico",
       "description": "L’Accademia Archè propone una vasta gamma di attività legate al benessere e alle Discipline Bionaturali, affinché ognuno di voi possa trovare il modo migliore e più adatto alle sue corde per mantenersi in salute e prevenire eventuali problematiche e/o patologie."
     },
     {
-      "title": "Rieducazione Funzionale",
+      "name": "Rieducazione Funzionale",
       "description": "A causa dello stile di vita a cui siamo abituati possiamo passare molte ore, spesso anche alcuni giorni senza contatto fisico. Ciò può avere un impatto molto negativo sulla nostra salute, molto più di quello che possiamo immaginare."
     }
   ],

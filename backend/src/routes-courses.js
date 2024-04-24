@@ -1,4 +1,7 @@
 import { readDb } from "./db.js";
+import { readUsersDb, tokenIsValid } from "./usersDb.js";
+import fs from "node:fs/promises";
+
 
 const omit = (obj, arr) =>
     Object.fromEntries(Object.entries(obj).filter(([k]) => !arr.includes(k)));
@@ -35,5 +38,25 @@ export const getCourseDetail = async (req, res) => {
     }
     else {
         res.status(400).json({ status: `no course found with this id: ${req.params.id}` });
+    }
+};
+
+export const editUserCourse = async (req, res) => {
+    let db = await readUsersDb();
+    if (tokenIsValid(db.users, req.body.token)) {
+        const users = db.users
+        const courses = users.find(user => user.token === req.body.token).courses
+        let course = courses.find(course => course.selectedDatas.id === req.body.selectedDatas.id)
+
+        course.selectedDatas = req.body.selectedDatas
+
+        console.log(courses, 'courses after find')
+
+        db.users.find(user => user.token === req.body.token).courses = courses
+        
+        await fs.writeFile("./usersDb.json", JSON.stringify(db));
+        res.status(201).json({ status: "ok", courses: courses });
+    } else {
+        res.status(400).json({ status: "email non esistente" });
     }
 };

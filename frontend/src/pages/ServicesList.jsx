@@ -1,24 +1,30 @@
-import React, { useEffect, useState } from "react"
-import CardList from "../components/CardList/CardList";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import Service from '../components/Service/Service'
+import { useLocation } from 'react-router-dom'
+import './servicelist.css'
 
 const ServicesList = () => {
+  const { pathname } = useLocation()
 
-    const {pathname} = useLocation()
-    
-    const[cardList, setCardList] = useState([])
+  const [cardList, setCardList] = useState([])
 
-    useEffect(() => {
-      fetch(`http://localhost:3000${pathname}`)
-      .then(res => res.json())
-      .then(json => setCardList(json.courses || json.treatments))
-    }, [pathname])
-    
-    return <div>
-        <section>
-            <CardList cardList={cardList} pathname={pathname}/>
-        </section>
-    </div>;
-};
+  useEffect(() => {
+    fetch(`http://localhost:3000${pathname}`)
+      .then((res) => res.json())
+      .then((json) => setCardList(json.courses || json.treatments))
+  }, [pathname])
 
-export default ServicesList;
+  const cardListWithLink = cardList.map((card) => {
+    return { ...card, link: `${pathname}/${card.id}` }
+  })
+
+  return (
+    <div>
+      <section className="service-list-container">
+        <Service serviceList={cardListWithLink} />
+      </section>
+    </div>
+  )
+}
+
+export default ServicesList

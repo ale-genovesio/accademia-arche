@@ -1,51 +1,69 @@
-.selected-date-button {
-    border: 1px solid #0068FF;
-    padding: 5px;
-    margin-right: 10px;
+.date-button,
+.hour-button,
+.selected-date-button,
+.selected-hour-button {
+  padding: 10px 1rem;
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  margin-right: 10px;
 }
 
+.date-button:hover,
+.hour-button:hover,
+.selected-date-button:hover,
+.selected-hour-button:hover {
+  cursor: pointer;
+}
+
+.selected-date-button,
 .selected-hour-button {
-    border: 1px solid #0068FF;
-    padding: 5px;
-    margin-right: 10px;
+  border: 1px solid #0068ff;
+}
+
+.course-detail-container {
+  max-width: 640px;
 }
 
 .h3-coursedetail {
-    color: #0068FF;
+  padding: 1rem;
+  border: 2px solid #0068ff;
+  border-radius: 10px;
+  background-color: rgba(0, 104, 255, 0.2);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.h3-coursedetail h3 {
+  margin: 0;
+  font-weight: 500;
 }
 
 .calendar-selecteddata {
-    border-top: 1px solid rgb(172, 172, 172);
-    padding: 1rem 0;
-    margin: 2rem 0;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.date-button,
-.hour-button {
-    padding: 5px;
-    border: 1px solid rgb(172, 172, 172);
-    margin-right: 10px;
+  border-top: 1px solid rgb(172, 172, 172);
+  padding: 1rem 0;
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .coursedetail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 20px;
 }
 
 .container-item-coursedetail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .button-submit-coursedetail {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }

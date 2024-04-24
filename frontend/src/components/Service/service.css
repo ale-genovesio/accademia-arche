@@ -1,59 +1,67 @@
 .services {
-    display: grid;
-    grid-template-rows: 450px 450px;
-    grid-template-columns: auto auto auto;
-    row-gap: 5rem;
-    column-gap: 3rem;
-    padding: 0 2rem;
-    justify-content: center;
-    margin-bottom: 7rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto auto auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+  padding: 0 2rem;
+  justify-content: center;
+  margin-bottom: 7rem;
 }
 
 .service {
-    font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.single-service:hover {
+  box-shadow: 0px 0px 50px 0px rgba(24, 24, 24, 0.07);
 }
 
 .pattern {
-    height: 140px;
-    width: 200px;
-
+  height: 140px;
+  width: 200px;
 }
 
 .service-image {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .service-button {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .title-service {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
 }
 
 .h1-service {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .single-service {
-    position: relative;
-    max-width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
+  position: relative;
+  max-width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-
+.bottom-service-container {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
 .service-button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }

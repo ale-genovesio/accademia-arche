@@ -1,20 +1,25 @@
-import React from "react"
-import Text from "../Text/Text";
-import messages from "../../messages/messages.json";
-import "./description.css"
+import React from 'react'
+import Text from '../Text/Text'
+import messages from '../../messages/messages.json'
+import './description.css'
 
 const Description = () => {
-    return (
-        <div className="description">
-            <h1 className="desc-left"><Text message={messages?.description?.["title-description-description"]} /></h1>
-            <div className="desc-right">
-                <Text message={messages?.description?.["text-description-description"]} />
-                {/* SISTEMARE IL LINK NELLA PAGINA GIUSTA */}
-                <a href="/">Scopri di piu'</a>
+  return (
+    <div className="description">
+      <h1 className="desc-left">
+        <Text
+          message={messages?.description?.['title-description-description']}
+        />
+      </h1>
+      <div className="desc-right">
+        <Text
+          message={messages?.description?.['text-description-description']}
+        />
+        {/* SISTEMARE IL LINK NELLA PAGINA GIUSTA */}
+        <a href="/trattamenti">Scopri di piu'</a>
+      </div>
+    </div>
+  )
+}
 
-            </div>
-        </div>
-    )
-};
-
-export default Description;
+export default Description

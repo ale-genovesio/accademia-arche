@@ -13,20 +13,22 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 
-import { getAllTreatments, getTreatmentDetail } from "./routes-treatments.js"
-import { getAllCourses, getCourseDetail } from "./routes-courses.js"
+import { getAllTreatments, getTreatmentDetail, getSuggestedTreatments } from "./routes-treatments.js"
+import { getAllCourses, getCourseDetail, editUserCourse } from "./routes-courses.js"
 import { passwordAccepted } from "./db.js"
-import { createUser, subscribeUserToCourse, removeCourseFromUser, getAllUsers } from "./usersDb.js"
+import { createUser, subscribeUserToCourse, removeCourseFromUser, getUserCourses } from "./usersDb.js"
 
 app.get("/corsi", getAllCourses)
 app.get("/corsi/:id", getCourseDetail)
 app.post("/corsi/iscrizione", subscribeUserToCourse)
+app.put("/corsi/modifica", editUserCourse)
 
 app.get("/trattamenti", getAllTreatments)
 app.get("/trattamenti/:id", getTreatmentDetail)
+app.get("/trattamentisuggeriti", getSuggestedTreatments)
 
 app.post('/user', createUser);
-app.get("/user", getAllUsers)
+app.get("/user/:id", getUserCourses)
 app.delete("/user", removeCourseFromUser)
 
 app.post('/accesso-areariservata', passwordAccepted);
