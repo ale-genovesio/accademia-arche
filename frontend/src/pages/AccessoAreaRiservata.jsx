@@ -28,7 +28,7 @@ const AccessoAreaRiservata = () => {
         <span>Qui puoi scaricare i pdf del corso che hai tenuto</span>
       </div>
       <div className="card-accesso-areariservsta">
-        {pdfList.length ? (
+        {pdfList?.length ? (
           pdfList.map((pdf) => (
             <DownloadCard
               name={pdf.name}

@@ -103,7 +103,7 @@ const AreaRiservata = ({
       <div className="top-areariservata">
         <h1>Corsi a cui sei iscritto</h1>
         {loggedInToken ? (
-          userCourses.length ? (
+          userCourses?.length ? (
             <div className="container-card-areariservata">
               {userCourses.map((course) => (
                 <Link to={`/corsi/${course.selectedDatas.id}`}>
