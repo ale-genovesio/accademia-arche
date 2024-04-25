@@ -1,0 +1,21 @@
+.description {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.desc-left {
+  font-weight: 500;
+  width: 40%;
+}
+
+.desc-right {
+  text-align: end;
+  width: 60%;
+  margin-left: 200px;
+}
+.desc-right a,
+.desc-right a:visited {
+  text-decoration: underline;
+  color: #0068ff;
+}

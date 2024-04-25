@@ -1,0 +1,21 @@
+/* scrivere css per ogni componente (modulo css) */
+
+.App {
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fcfcfd;
+}
+
+button {
+  font-family: 'Urbanist', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  line-height: auto;
+  text-decoration: none;
+}

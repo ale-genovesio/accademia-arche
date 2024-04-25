@@ -1,0 +1,13 @@
+.accesso-areariservsta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.card-accesso-areariservsta {
+  padding: 2rem;
+  gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}

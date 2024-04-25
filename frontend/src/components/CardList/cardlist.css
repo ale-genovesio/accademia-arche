@@ -1,0 +1,40 @@
+.cardlist {
+    display: flex;
+    padding: 10rem 2rem;
+
+    justify-content: space-between;
+}
+
+.sigle-cardlist {
+    background-color: #fff;
+    display: flex;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.sigle-cardlist:hover {
+    box-shadow: 1px 1px 10px;
+
+}
+
+.image-cardlist {
+    max-width: 150px;
+}
+
+.title-cardlist,
+.p-cardlist {
+    color: #000;
+}
+
+.container-image-cardlist {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.container-item-cardlist {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}

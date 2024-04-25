@@ -1,0 +1,140 @@
+{
+  "header": [
+    {
+      "label": "Trattamenti",
+      "link": "/trattamenti"
+    },
+    {
+      "label": "Corsi",
+      "link": "/corsi"
+    },
+    {
+      "label": "About",
+      "link": "/about"
+    }
+  ],
+  "buttons": {
+    "header-button": "Area riservata",
+    "label-button": "Scopri di più o prenota",
+    "low-description-button": "Scopri tutti i vantaggi",
+    "area-riservata-download": "Scarica lezione"
+  },
+  "label": {
+    "left-label": "Benvenuti!",
+    "right-label": "Trattamento osteopatico"
+  },
+  "description": {
+    "label-description": "Trattamento osteopatico - Tecniche osteopatiche olistiche",
+    "title-description-description": "Scegli le tipologia di trattamenti",
+    "text-description-description": "Il metodo permette di trattare molti disturbi e problematiche quali: cervicalgia, lombalgia, sciatalgia, dolori muscolari e articolari (anche in seguito a traumi e/o interventi), problemi digestivi, problemi viscerali in generale, disfunzioni cranio-sacrali, emicrania, ecc…",
+    "text-low": "Lavoriamo per te e perché tu possa vivere al meglio ed esprimere le tue potenzialità. Cerchiamo, nel miglior modo possibile, di farti stare bene dal primo ingresso fino a quando esci dallo Studio.",
+    "text-low-two": "Per noi è importante la relazione con la persona, la competenza professionale, l’aggiornamento continuo e la tua sicurezza.",
+    "text-low-three": " L’obiettivo che ci sta più a cuore è quello di prevenire e risolvere i problemi, prendendoci cura della tua persona in modo davvero olistico, ovvero a 360 gradi. NON eseguiamo tecniche thrust (quelle che fanno “scrocchiare”), ma esclusivamente tecniche manipolative dolci e non invasive.",
+    "text-low-for": " Questo perché vogliamo che da noi tu possa vivere un’esperienza piacevole."
+  },
+  "advantages": [
+    {
+      "title": "Professionisti sempre aggiornati",
+      "description": "Per noi è d’obbligo essere aggiornati e offrirti servizi sempre più efficaci.",
+      "imageLink": "/assets/icons/book.svg"
+    },
+    {
+      "title": "Orari ampi e flessibili",
+      "description": "Puoi scegliere il tuo orario e giorno preferito, anche prenotando direttamente on-line.",
+      "imageLink": "/assets/icons/clock.svg"
+    },
+    {
+      "title": "A tuo agio fin da subito",
+      "description": "NON eseguiamo tecniche thrust. Cerchiamo di farti stare bene fin da subito con un approccio delicato e non invasivo.",
+      "imageLink": "/assets/icons/heart.svg"
+    },
+    {
+      "title": "Per adulti e bambini",
+      "description": "Trattamenti dedicati a tutte le fasce di età, anche pediatrica e neonatale.",
+      "imageLink": "/assets/icons/child.svg"
+    },
+    {
+      "title": "Trattamento in gravidanza",
+      "description": "Professionisti specializzati che ti seguiranno prima e dopo il parto.",
+      "imageLink": "/assets/icons/pregnant.svg"
+    },
+    {
+      "title": "Lettino elettrico",
+      "description": "Disponiamo di un lettino elettrico che rende più sicuri e agevoli gli spostamenti del soggetto.",
+      "imageLink": "/assets/icons/bed.svg"
+    }
+  ],
+  "footer": [
+    {
+      "title": "Giorni e orari segreteria didattica",
+      "description": "Lunedì: 15.00-19.00",
+      "descriptiontwo": "Martedì-Venerdì: 10.00-13.00 / 15.00-19.00",
+      "descriptionthree": "Sabato: 10.00-12.30"
+    },
+    {
+      "title": "Giorni e orari studio trattamenti",
+      "description": "Martedì-Venerdì: 9.00-13.00 / 15.00-19.00",
+      "descriptiontwo": "In caso di necessità di prenotazione in giorni e orari non disponibili in agenda puoi contattare direttamente lo Studio al numero: 340 0908267"
+    },
+    {
+      "title": "Indirizzo",
+      "description": "Corso Unione Sovietica 415/D, 10135, Torino"
+    },
+    {
+      "title": "Contatti",
+      "description": "Cel: 340 0908267",
+      "descriptiontwo": "E-mail: info@accademia-arche.it"
+    }
+  ],
+  "about": {
+    "title": "Chi Siamo",
+    "description": "Siamo uno studio di Professionisti a tua disposizione. Un’eccellenza nel panorama italiano, nata dalla competenza e dalla passione, con Accreditamento a livello internazionale. Lo Studio di Medicina Olistica è una realtà di eccellenza che siamo riusciti a creare partendo da zero. L’idea fondamentale è quella di dare vita a una struttura polifunzionale che possa offrire un servizio di accoglienza e di attenzione al cliente di alta qualità. Siamo spinti dal desiderio che tu, così come i soggetti più piccoli, possiate vivere le sedute e i trattamenti in maniera spensierata e tranquilla. Siamo riusciti in pochi anni e con le grandi difficoltà del momento, a dare vita al nostro sogno e alla nostra visione, la quale si affina sempre di più momento dopo momento.",
+    "image": "https://www.accademia-arche.it/wp-content/uploads/2021/12/DSC_0194-672x372.jpg",
+    "titleProfessionisti": "I professionisti",
+    "professionisti": [
+      {
+        "nome": "Dott. Federico Ghio",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/DSC_0591-683x1024.jpg",
+        "skills": [
+          "Direttore dello Studio",
+          "Direttore Didattico",
+          "Direttore Tecnico Attività",
+          "Direttore Dipartimento Dos-Dbn Piemonte",
+          "Laureato in Scienze Motorie (Magistrale)",
+          "Osteopata Dos-Dbn",
+          "Chinesiologo",
+          "Kinesiologo",
+          "Docente di Scienze Osteopatiche Olistiche",
+          "Creatore del Metodo Integrato di Riequilibrio Olistico",
+          "Maestro V Dan di Goju Ryu Karate-Do",
+          "Docente di Karate Tradizionale Bionaturale"
+        ]
+      },
+      {
+        "nome": "Alessandra Caradonna",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/DSC_0606-1-865x1024.jpg",
+        "skills": [
+          "Massoterapista MCB",
+          "Massaggiatrice Olistica",
+          "Operatrice Discipline Olistiche per la Salute"
+        ]
+      },
+      {
+        "nome": "M. Cristina Pegoraro",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/DSC_0594-683x1024.jpg",
+        "skills": [
+          "Operatrice Discipline Olistiche per la Salute",
+          "Massaggiatrice Olistica"
+        ]
+      },
+      {
+        "nome": "Dott. Pierluigi Caramagna",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/Pier.jpg",
+        "skills": [
+          "Biologo",
+          "Naturopata"
+        ]
+      }
+    ]
+  }
+}
