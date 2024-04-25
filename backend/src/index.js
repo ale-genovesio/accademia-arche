@@ -1,7 +1,9 @@
 import express from "express"
 import bodyParser from "body-parser"
+
 const app = express()
 const port = 3000
+
 app.use(bodyParser.json())
 
 import cors from "cors"
@@ -15,7 +17,7 @@ app.use(cors(corsOptions))
 
 import { getAllTreatments, getTreatmentDetail, getSuggestedTreatments } from "./routes-treatments.js"
 import { getAllCourses, getCourseDetail, editUserCourse } from "./routes-courses.js"
-import { passwordAccepted } from "./db.js"
+import { passwordAccepted, getServices, getPdfList } from "./db.js"
 import { createUser, subscribeUserToCourse, removeCourseFromUser, getUserCourses } from "./usersDb.js"
 
 app.get("/corsi", getAllCourses)
@@ -32,6 +34,10 @@ app.get("/user/:id", getUserCourses)
 app.delete("/user", removeCourseFromUser)
 
 app.post('/accesso-areariservata', passwordAccepted);
+
+app.get("/servizi", getServices)
+
+app.get("/areariservata/:id", getPdfList)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

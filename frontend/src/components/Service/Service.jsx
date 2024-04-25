@@ -1,14 +1,12 @@
 import React from 'react'
 import Image from '../Image/Image'
 import Text from '../Text/Text'
-import pattern from '../../assets/Pattern.png'
 import { ReactComponent as RoundArrow } from '../../assets/round-arrow.svg'
 import './service.css'
 import { ButtonRound } from '../Button/Button'
 import { Link } from 'react-router-dom'
-const Service = ({ serviceList }) => {
-  console.log(serviceList, 'serviceList')
 
+const Service = ({ serviceList }) => {
   return (
     <div className="services">
       {serviceList.map((service) => (

@@ -2,15 +2,10 @@ import { readDb } from "./db.js";
 import { readUsersDb, tokenIsValid } from "./usersDb.js";
 import fs from "node:fs/promises";
 
-
-const omit = (obj, arr) =>
-    Object.fromEntries(Object.entries(obj).filter(([k]) => !arr.includes(k)));
-
 export const getAllCourses = async (req, res) => {
     let foundCourses = [];
     let db = await readDb();
     let keys = Object.keys(req.query);
-    console.log(db.course);
     if (keys.length == 0) {
         res.json({ status: "ok", courses: db.course.map(course => { return { name: course.name, description: course.description, image: course.image, id: course.id } }) });
         return;
@@ -33,7 +28,7 @@ export const getCourseDetail = async (req, res) => {
     let course = db.course.find((course) => course.id == req.params.id);
     if (course) {
 
-        res.json({ status: "ok", course: omit(course, ["pdf"]) });
+        res.json({ status: "ok", course: course });
 
     }
     else {
@@ -49,8 +44,6 @@ export const editUserCourse = async (req, res) => {
         let course = courses.find(course => course.selectedDatas.id === req.body.selectedDatas.id)
 
         course.selectedDatas = req.body.selectedDatas
-
-        console.log(courses, 'courses after find')
 
         db.users.find(user => user.token === req.body.token).courses = courses
         

@@ -19,6 +19,7 @@ const CourseDetail = ({
   const { slug } = useParams()
   const isUserAlreadySubscribed = userCourses?.find(
     (course) => course.selectedDatas.id === slug
+    //cerco se l'id della pagina in cui sono corrisponde a uno degli id dei corsi a cui sono iscritto
   )
 
   const [courseDetail, setCourseDetail] = useState({})
@@ -35,6 +36,9 @@ const CourseDetail = ({
       selectedHour: isUserAlreadySubscribed?.selectedDatas?.hour,
     })
   }, [userCourses])
+  // serve a controllare se lutente e'gia iscritto al corso ma non loggato, cio'creerebbe due problemi ovvero il
+  // potersi iscrivere due volte al corso e cio'rovinerebbe il db e il secondo caso e'se lutente rientra in pagina da
+  // loggato non visualizza i bottoni con data e orario selezionati
 
   useEffect(() => {
     fetch(`http://localhost:3000/corsi/${slug}`)
@@ -45,7 +49,6 @@ const CourseDetail = ({
       })
   }, [slug])
 
-  //Submit user date and hour
   const handleSubmit = () => {
     if (!isUserAlreadySubscribed) {
       fetch('http://localhost:3000/corsi/iscrizione', {
@@ -76,7 +79,6 @@ const CourseDetail = ({
         })
         .catch((err) => console.error(err))
     } else {
-      //put call
       fetch('http://localhost:3000/corsi/modifica', {
         method: 'PUT',
         headers: {
@@ -104,11 +106,9 @@ const CourseDetail = ({
     }
   }
 
-  console.log(isJustSubscribed, 'isJustSubscribed')
-
   return (
     <div className="coursedetail">
-      <Label message={'Corso'} />
+      <Label message={courseDetail?.price} classNameLabel={'course-price'} />
       <div className="container-item-coursedetail">
         <h2>{courseDetail.name}</h2>
         <p>{courseDetail.description}</p>
@@ -118,116 +118,112 @@ const CourseDetail = ({
         ></div>
       </div>
       <div className="course-detail-container">
-        {
-          /* isJustSubscribed ? <>Grazie per esserti iscritto al corso! Puoi modificare la data e l'orario o disiscriverti dal corso nella tua <Link to="/areariservata">area riservata</Link></> : 
-            isUserAlreadySubscribed ? <span>Sei giá iscritto al corso! Puoi modificare la data e l'orario o disiscriverti dal corso nella tua <Link to="/areariservata">area riservata</Link></span> : */
-          loggedInToken ? (
+        {loggedInToken ? (
+          <div>
+            <h2>Iscriviti al corso</h2>
+            <span>Per iscriverti al corso selezione una data e un orario.</span>
             <div>
-              <h2>Iscriviti al corso</h2>
-              <span>
-                Per iscriverti al corso selezione una data e un orario.
-              </span>
-              <div>
-                <div className="calendar-selecteddata">
-                  <Calendar />
-                  <span>Seleziona il giorno</span>
-                </div>
-                {nextAvailableDays?.map((day) => (
-                  <button
-                    className={
-                      selectedDatas.selectedDate === day
-                        ? 'selected-date-button'
-                        : 'date-button'
-                    }
-                    onClick={() =>
-                      setSelectedDatas((prevState) => {
-                        return { ...prevState, selectedDate: day }
-                      })
-                    }
-                  >
-                    {day}
-                  </button>
-                ))}
-              </div>
               <div className="calendar-selecteddata">
-                <Clock />
-                <span>Seleziona l’orario</span>
+                <Calendar />
+                <span>Seleziona il giorno</span>
               </div>
+              {nextAvailableDays?.map((day) => (
+                <button
+                  className={
+                    selectedDatas.selectedDate === day
+                      ? 'selected-date-button'
+                      : 'date-button'
+                  }
+                  onClick={() =>
+                    // serve a prendere lo stato attuale e modificare solo cio'che modifico,
+                    //in questo caso il giorno selezionato
+                    setSelectedDatas((prevState) => {
+                      return { ...prevState, selectedDate: day }
+                    })
+                  }
+                >
+                  {day}
+                </button>
+              ))}
+            </div>
+            <div className="calendar-selecteddata">
+              <Clock />
+              <span>Seleziona l’orario</span>
+            </div>
 
-              {(selectedDatas?.selectedDate ||
-                isUserAlreadySubscribed ||
-                isJustSubscribed) &&
-                courseDetail?.hours?.map((hour) => (
-                  <button
-                    className={
-                      selectedDatas.selectedHour === hour
-                        ? 'selected-hour-button'
-                        : 'hour-button'
-                    }
-                    onClick={() =>
-                      setSelectedDatas((prevState) => {
-                        return { ...prevState, selectedHour: hour }
-                      })
-                    }
-                  >
-                    {hour}
-                  </button>
-                ))}
+            {(selectedDatas?.selectedDate ||
+              isUserAlreadySubscribed ||
+              isJustSubscribed) &&
+              courseDetail?.hours?.map((hour) => (
+                <button
+                  className={
+                    selectedDatas.selectedHour === hour
+                      ? 'selected-hour-button'
+                      : 'hour-button'
+                  }
+                  onClick={() =>
+                    setSelectedDatas((prevState) => {
+                      return { ...prevState, selectedHour: hour }
+                    })
+                  }
+                >
+                  {hour}
+                </button>
+              ))}
 
-              {selectedDatas.selectedHour &&
-                selectedDatas?.selectedDate &&
-                (isUserAlreadySubscribed?.selectedDatas?.day !==
-                  selectedDatas.selectedDate ||
-                  isUserAlreadySubscribed?.selectedDatas?.hour !==
-                    selectedDatas.selectedHour) && (
-                  <div className="button-submit-coursedetail">
-                    <ButtonSmall message={'Iscriviti'} onClick={handleSubmit} />
-                  </div>
-                )}
-
-              {isJustSubscribed &&
+            {selectedDatas.selectedHour &&
+              selectedDatas?.selectedDate &&
+              (isUserAlreadySubscribed?.selectedDatas?.day !==
+                selectedDatas.selectedDate ||
+                isUserAlreadySubscribed?.selectedDatas?.hour !==
+                  selectedDatas.selectedHour) && (
+                <div className="button-submit-coursedetail">
+                  <ButtonSmall message={'Iscriviti'} onClick={handleSubmit} />
+                </div>
+              )}
+            {/* banner informativi */}
+            {isJustSubscribed &&
+            !(
+              isUserAlreadySubscribed?.selectedDatas?.day !==
+                selectedDatas.selectedDate ||
+              isUserAlreadySubscribed?.selectedDatas?.hour !==
+                selectedDatas.selectedHour
+            ) ? (
+              <div className="h3-coursedetail">
+                <h3>Grazie per esserti iscritto al corso!</h3>
+                <span>
+                  Puoi modificare la data e l'orario qui, o disiscriverti dal
+                  corso nella tua{' '}
+                  <Link to="/areariservata">
+                    <u>Area Riservata</u>
+                  </Link>
+                </span>
+              </div>
+            ) : isUserAlreadySubscribed &&
               !(
                 isUserAlreadySubscribed?.selectedDatas?.day !==
                   selectedDatas.selectedDate ||
                 isUserAlreadySubscribed?.selectedDatas?.hour !==
                   selectedDatas.selectedHour
               ) ? (
-                <div className="h3-coursedetail">
-                  <h3>Grazie per esserti iscritto al corso!</h3>
-                  <span>
-                    Puoi modificare la data e l'orario qui, o disiscriverti dal
-                    corso nella tua{' '}
-                    <Link to="/areariservata">
-                      <u>Area Riservata</u>
-                    </Link>
-                  </span>
-                </div>
-              ) : isUserAlreadySubscribed &&
-                !(
-                  isUserAlreadySubscribed?.selectedDatas?.day !==
-                    selectedDatas.selectedDate ||
-                  isUserAlreadySubscribed?.selectedDatas?.hour !==
-                    selectedDatas.selectedHour
-                ) ? (
-                <div className="h3-coursedetail">
-                  <h3>Sei giá iscritto al corso!</h3>
-                  <span>
-                    Puoi modificare la data e l'orario qui, o disiscriverti dal
-                    corso nella tua{' '}
-                    <Link to="/areariservata">
-                      <u>Area Riservata</u>
-                    </Link>
-                  </span>
-                </div>
-              ) : null}
-            </div>
-          ) : (
-            <EmailForm
-              setLoggedInToken={setLoggedInToken}
-              setUserCourses={setUserCourses}
-            />
-          )
-        }
+              <div className="h3-coursedetail">
+                <h3>Sei giá iscritto al corso!</h3>
+                <span>
+                  Puoi modificare la data e l'orario qui, o disiscriverti dal
+                  corso nella tua{' '}
+                  <Link to="/areariservata">
+                    <u>Area Riservata</u>
+                  </Link>
+                </span>
+              </div>
+            ) : null}
+          </div>
+        ) : (
+          <EmailForm
+            setLoggedInToken={setLoggedInToken}
+            setUserCourses={setUserCourses}
+          />
+        )}
       </div>
     </div>
   )

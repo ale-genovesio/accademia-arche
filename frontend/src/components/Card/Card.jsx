@@ -1,7 +1,5 @@
 import React from 'react'
 import { ReactComponent as Heart } from '../../assets/heart.svg'
-/* import Text from "../Text/Text";
-import {ButtonSmall} from "../Button/Button"; */
 import { ReactComponent as RoundArrow } from '../../assets/round-arrow.svg'
 import { ButtonRound } from '../Button/Button'
 import './card.css'
@@ -39,7 +37,6 @@ const Card = () => {
           </div>
         </div>
       ))}
-      {/*  <ButtonSmall></ButtonSmall> */}
     </div>
   )
 }

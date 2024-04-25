@@ -15,7 +15,6 @@ const Description = () => {
         <Text
           message={messages?.description?.['text-description-description']}
         />
-        {/* SISTEMARE IL LINK NELLA PAGINA GIUSTA */}
         <a href="/trattamenti">Scopri di piu'</a>
       </div>
     </div>

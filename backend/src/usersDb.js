@@ -2,7 +2,7 @@
 import { nanoid } from "nanoid";
 import fs from "node:fs/promises";
 
-
+// funzione  che permette di creare un nuovo oggetto (fromEntries()) escludendo delle chiavi (arr) specificate da un oggetto esistente (obj)
 const omit = (obj, arr) =>
     Object.fromEntries(Object.entries(obj).filter(([k]) => !arr.includes(k)));
 
@@ -40,7 +40,6 @@ export const createUser = async (req, res) => {
 export const subscribeUserToCourse = async (req, res) => {
     let db = await readUsersDb();
     if (tokenIsValid(db.users, req.body.token)) {
-        console.log(db.users.find(user => user.token === req.body.token))
         const currentUser = db.users.find(user => user.token === req.body.token)
         currentUser.courses.push(omit(req.body, "token"));
         await fs.writeFile("./usersDb.json", JSON.stringify(db));
@@ -65,7 +64,6 @@ const userIsValid = (users) => {
 const userExisist = async (mail) => {
     let db = await readUsersDb();
     let users = db.users;
-    console.log(users, 'user')
     let sameUser = users.filter((u) => u.email == mail);
     return sameUser.length > 0;
 }
@@ -75,7 +73,6 @@ export const getAllUsers = async (req, res) => {
     let foundUsers = [];
     let db = await readUsersDb();
     let keys = Object.keys(req.query);
-    console.log(db.users);
     if (keys.length == 0) {
         res.json({ status: "ok", users: db.users });
         return;
@@ -102,12 +99,6 @@ export const getUserCourses = async (req, res) => {
     }
     res.json({ status: "error", message: "no user found with this token" });
 };
-
-
-
-
-
-
 
 export const removeCourseFromUser = async (req, res) => {
     let db = await readUsersDb();

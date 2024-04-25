@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './areariservata.css'
 import { useNavigate } from 'react-router-dom'
 import EmailForm from '../components/EmailForm/EmailForm'
-/* import Image from "../components/Image/Image"; */
 import { Link } from 'react-router-dom'
 import { ButtonRound, ButtonSmall } from '../components/Button/Button'
 import { ReactComponent as Delete } from '../assets/delete.svg'
@@ -17,9 +16,13 @@ const AreaRiservata = ({
   const [password, setPassword] = useState('')
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedCourseId, setSelectedCourseId] = useState('')
+  const [isError, setIsError] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    // serve a togliere gli spazi prima e dopo la stinga senno'se non scrivi nulla nel campo ma solo
+    // uno spazio js lo considera come carattere e invierebbe al server una password vuota o anche
+    // se si aggiunge uno spazio alla fine della stringa lo considera carattere
     if (password.trim() !== '') {
       const res = await fetch('http://localhost:3000/accesso-areariservata', {
         method: 'POST',
@@ -32,15 +35,14 @@ const AreaRiservata = ({
         }),
       })
       if (res.status < 400) {
-        navigate('/accesso-areariservata')
+        navigate(`/accesso-areariservata/${password}`)
+      } else {
+        setIsError(true)
       }
     }
   }
 
-  console.log(selectedCourseId, 'selectedCourseId')
-
   const handleUnsubscribe = () => {
-    //Qua fare la DELETE
     fetch('http://localhost:3000/user', {
       method: 'DELETE',
       headers: {
@@ -60,6 +62,9 @@ const AreaRiservata = ({
           setIsModalOpen(!isModalOpen)
         }
       })
+      // catch() serve cattuare gli errori della chiamata, nel caso si spaccasse il server e la chimata andasse
+      // in errore
+      // da scrivere in tutte le fetch
       .catch((err) => {
         console.error(err)
         setIsModalOpen(!isModalOpen)
@@ -67,59 +72,82 @@ const AreaRiservata = ({
   }
 
   return (
-    <div>
+    <div className="area-riservata-container">
       {isModalOpen && (
-        <div className="modal">
-          <button
-            className="close-modal"
-            onClick={() => setIsModalOpen(!isModalOpen)}
-          >
-            X
-          </button>
-          <div className="modal-container">
-            <h3 className="text-modal">
-              Sei sicuro di volerti disiscrivere dal corso?
-            </h3>
-            <div className="buttons-modal">
-              <ButtonSmall
-                message={'NO'}
+        <div className="modal-background-container">
+          <div className="modal">
+            <div className="close-modal-container">
+              <button
+                className="close-modal"
                 onClick={() => setIsModalOpen(!isModalOpen)}
-              />
-              <ButtonSmall message={'SÍ'} onClick={handleUnsubscribe} />
+              >
+                X
+              </button>
+            </div>
+            <div className="modal-container">
+              <h3 className="text-modal">
+                Sei sicuro di volerti disiscrivere dal corso?
+              </h3>
+              <div className="buttons-modal">
+                <ButtonSmall
+                  message={'NO'}
+                  onClick={() => setIsModalOpen(!isModalOpen)}
+                  isInverted
+                />
+                <ButtonSmall message={'SÍ'} onClick={handleUnsubscribe} />
+              </div>
             </div>
           </div>
         </div>
       )}
       <div className="top-areariservata">
+        <h1>Corsi a cui sei iscritto</h1>
         {loggedInToken ? (
-          <div className="container-card-areariservata">
-            {userCourses.map((course) => (
-              <Link to={`/corsi/${course.selectedDatas.id}`}>
-                <div className="single-card-areariservata">
-                  <h3>{course.name}</h3>
-                  {/* <Image className={"image-card-arearservata"} src={course.image}/> */}
-                  <span>{course.description}</span>
-                  <span>{course.selectedDatas.day}</span>
-                  <span>{course.selectedDatas.hour}</span>
-                  <div className="container-button-card-areariservata">
-                    <ButtonRound
-                      isInverted={true}
-                      Icon={Delete}
-                      onClick={(e) => {
-                        e.preventDefault()
-                        setIsModalOpen(!isModalOpen)
-                        setSelectedCourseId(course.selectedDatas.id)
-                      }}
-                    />
+          userCourses.length ? (
+            <div className="container-card-areariservata">
+              {userCourses.map((course) => (
+                <Link to={`/corsi/${course.selectedDatas.id}`}>
+                  <div className="single-card-areariservata">
+                    <h3>{course.name}</h3>
+                    <span>{course.description}</span>
+                    <span className="course-card-day">
+                      {course.selectedDatas.day}
+                    </span>
+                    <span className="course-card-hour">
+                      {course.selectedDatas.hour}
+                    </span>
+                    <div className="container-button-card-areariservata">
+                      <ButtonRound
+                        isInverted={true}
+                        Icon={Delete}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          //evito che al click mi porti al link indicato sulla card e riesco a fare
+                          //la delete
+                          setIsModalOpen(!isModalOpen)
+                          setSelectedCourseId(course.selectedDatas.id)
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <span className="no-courses-text">
+              Non sei iscritto ad alcun corso
+            </span>
+          )
         ) : (
-          <EmailForm setLoggedInToken={setLoggedInToken} />
+          <EmailForm
+            setLoggedInToken={setLoggedInToken}
+            setUserCourses={setUserCourses}
+            showTitle={false}
+          />
         )}
       </div>
+
+      <div className="divider"></div>
 
       <div className="bottom-area-riservata">
         <h1>Accedi per scaricare i contenuti dei tuoi corsi</h1>
@@ -131,13 +159,20 @@ const AreaRiservata = ({
           <form action="" onSubmit={(e) => handleSubmit(e)}>
             <div className="form-areariservata">
               <input
+                className={isError ? 'input-error' : ''}
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value)
+                  setIsError(false)
+                }}
                 placeholder="Inserisci password"
               />
               <ButtonSmall type="submit" message={'Accedi'} />
             </div>
+            {isError && (
+              <span className="error-text">Password inserita non valida</span>
+            )}
           </form>
         </div>
       </div>

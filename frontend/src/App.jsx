@@ -9,9 +9,12 @@ import ServicesList from './pages/ServicesList'
 import CourseDetail from './pages/CourseDetail'
 import TreatmentDetail from './pages/TreatmentDetail'
 import { useState, useEffect } from 'react'
+import About from './pages/About'
 
 function App() {
   const [loggedInToken, setLoggedInToken] = useState(null)
+  // faccio partire da null perche'il localstorage nel caso in cui non ci sia l'item
+  // che sto cercando restituisce null, quindi non metto undefined
   const [userCourses, setUserCourses] = useState([])
 
   useEffect(() => {
@@ -52,7 +55,7 @@ function App() {
             }
           />
           <Route
-            path="/accesso-areariservata"
+            path="/accesso-areariservata/:slug"
             element={<AccessoAreaRiservata />}
           />
           <Route path="/corsi" element={<ServicesList />} />
@@ -77,6 +80,7 @@ function App() {
               />
             }
           />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </BrowserRouter>

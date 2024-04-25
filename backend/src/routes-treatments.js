@@ -4,7 +4,6 @@ export const getAllTreatments = async (req, res) => {
     let foundTreatments = [];
     let db = await readDb();
     let keys = Object.keys(req.query);
-    console.log(db.treatments);
     if (keys.length == 0) {
         res.json({ status: "ok", treatments: db.treatments });
         return;

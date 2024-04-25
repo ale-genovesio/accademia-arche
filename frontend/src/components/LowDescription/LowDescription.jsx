@@ -2,16 +2,16 @@ import React from 'react'
 import './lowDescription.css'
 import messages from '../../messages/messages.json'
 import { ReactComponent as ArrowRight } from '../../assets/arrow-right.svg'
-import { ReactComponent as Heart } from '../../assets/heart.svg'
 import { ButtonSmall } from '../Button/Button'
 import { Link } from 'react-router-dom'
+import Advantages from '../Advantages/Advantages'
 
 const LowDescription = () => {
   return (
     <div className="low-description">
       <div>
         <h1 className="h1-low-desc">
-          Principali vantaggi del <span className="blue-text">trattamento</span>
+          Principali vantaggi dei <span className="blue-text">trattamenti</span>
         </h1>
         <Link to="/about">
           <ButtonSmall
@@ -22,13 +22,7 @@ const LowDescription = () => {
         </Link>
       </div>
       <div className="advantages">
-        {messages.advantages.map((a) => (
-          <div>
-            <Heart></Heart>
-            <h3>{a.title}</h3>
-            <p>{a.description}</p>
-          </div>
-        ))}
+        <Advantages advantages={messages.advantages.slice(0, 3)} />
       </div>
     </div>
   )

@@ -28,6 +28,10 @@
   max-width: 640px;
 }
 
+.injected-html-first > * {
+  width: 100%;
+}
+
 .injected-html-second {
   display: flex;
   flex-direction: column;
@@ -55,4 +59,7 @@
   padding: 2rem;
   justify-content: space-between;
   border-top: 1px solid rgb(179, 172, 172);
+}
+.treatment-price {
+  font-weight: bold;
 }

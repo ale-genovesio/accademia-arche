@@ -1,18 +1,19 @@
 .low-description {
-    display: flex;
-    margin-top: 200px;
-    padding: 2rem 2rem;
+  display: flex;
+  margin-top: 200px;
+  padding: 2rem 2rem;
 }
 
 .advantages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
 .h1-low-desc {
-    font-weight: 500;
-    margin: 0;
-    margin-right: 100px;
-    margin-bottom: 50px;
+  font-weight: 500;
+  margin: 0;
+  margin-right: 100px;
+  margin-bottom: 50px;
 }

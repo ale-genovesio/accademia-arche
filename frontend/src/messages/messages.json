@@ -9,10 +9,6 @@
       "link": "/corsi"
     },
     {
-      "label": "Attivitá",
-      "link": "/attivita"
-    },
-    {
       "label": "About",
       "link": "/about"
     }
@@ -38,42 +34,34 @@
   },
   "advantages": [
     {
-      "title": "Beneficio 1",
-      "description": "Il metodo permette di trattare molti disturbi"
+      "title": "Professionisti sempre aggiornati",
+      "description": "Per noi è d’obbligo essere aggiornati e offrirti servizi sempre più efficaci.",
+      "imageLink": "/assets/icons/book.svg"
     },
     {
-      "title": "Beneficio 2",
-      "description": "Il metodo permette di trattare molti disturbi"
+      "title": "Orari ampi e flessibili",
+      "description": "Puoi scegliere il tuo orario e giorno preferito, anche prenotando direttamente on-line.",
+      "imageLink": "/assets/icons/clock.svg"
     },
     {
-      "title": "Beneficio 3",
-      "description": "Il metodo permette di trattare molti disturbi"
-    }
-  ],
-  "services": [
-    {
-      "name": "Trattamenti Osteopatici Dos-Dbn",
-      "description": "In questo contesto e, considerato quanto detto in precedenza, la Scuola di Formazione Integrata Accademia Archè ha ottenuto l’accreditamento per istituire un corso di osteopatia denominato “Scienze Osteopatiche Olistiche”, mediante un iter di controllo e vaglio dei programmi formativi, delle modalità di erogazione e delle competenze dei docenti."
+      "title": "A tuo agio fin da subito",
+      "description": "NON eseguiamo tecniche thrust. Cerchiamo di farti stare bene fin da subito con un approccio delicato e non invasivo.",
+      "imageLink": "/assets/icons/heart.svg"
     },
     {
-      "name": "Visite Mediche per certificato sportivo non agonistico",
-      "description": "L’Accademia Archè propone una vasta gamma di attività legate al benessere e alle Discipline Bionaturali, affinché ognuno di voi possa trovare il modo migliore e più adatto alle sue corde per mantenersi in salute e prevenire eventuali problematiche e/o patologie."
+      "title": "Per adulti e bambini",
+      "description": "Trattamenti dedicati a tutte le fasce di età, anche pediatrica e neonatale.",
+      "imageLink": "/assets/icons/child.svg"
     },
     {
-      "name": "Rieducazione Funzionale",
-      "description": "A causa dello stile di vita a cui siamo abituati possiamo passare molte ore, spesso anche alcuni giorni senza contatto fisico. Ciò può avere un impatto molto negativo sulla nostra salute, molto più di quello che possiamo immaginare."
+      "title": "Trattamento in gravidanza",
+      "description": "Professionisti specializzati che ti seguiranno prima e dopo il parto.",
+      "imageLink": "/assets/icons/pregnant.svg"
     },
     {
-      "name": "Trattamenti Osteopatici Dos-Dbn",
-      "description": "In questo contesto e, considerato quanto detto in precedenza, la Scuola di Formazione Integrata Accademia Archè ha ottenuto l’accreditamento per istituire un corso di osteopatia denominato “Scienze Osteopatiche Olistiche”, mediante un iter di controllo e vaglio dei programmi formativi, delle modalità di erogazione e delle competenze dei docenti."
-    },
-    {
-      "name": "Visite Mediche per certificato sportivo non agonistico",
-      "description": "L’Accademia Archè propone una vasta gamma di attività legate al benessere e alle Discipline Bionaturali, affinché ognuno di voi possa trovare il modo migliore e più adatto alle sue corde per mantenersi in salute e prevenire eventuali problematiche e/o patologie."
-    },
-    {
-      "name": "Rieducazione Funzionale",
-      "description": "A causa dello stile di vita a cui siamo abituati possiamo passare molte ore, spesso anche alcuni giorni senza contatto fisico. Ciò può avere un impatto molto negativo sulla nostra salute, molto più di quello che possiamo immaginare."
+      "title": "Lettino elettrico",
+      "description": "Disponiamo di un lettino elettrico che rende più sicuri e agevoli gli spostamenti del soggetto.",
+      "imageLink": "/assets/icons/bed.svg"
     }
   ],
   "footer": [
@@ -97,5 +85,56 @@
       "description": "Cel: 340 0908267",
       "descriptiontwo": "E-mail: info@accademia-arche.it"
     }
-  ]
+  ],
+  "about": {
+    "title": "Chi Siamo",
+    "description": "Siamo uno studio di Professionisti a tua disposizione. Un’eccellenza nel panorama italiano, nata dalla competenza e dalla passione, con Accreditamento a livello internazionale. Lo Studio di Medicina Olistica è una realtà di eccellenza che siamo riusciti a creare partendo da zero. L’idea fondamentale è quella di dare vita a una struttura polifunzionale che possa offrire un servizio di accoglienza e di attenzione al cliente di alta qualità. Siamo spinti dal desiderio che tu, così come i soggetti più piccoli, possiate vivere le sedute e i trattamenti in maniera spensierata e tranquilla. Siamo riusciti in pochi anni e con le grandi difficoltà del momento, a dare vita al nostro sogno e alla nostra visione, la quale si affina sempre di più momento dopo momento.",
+    "image": "https://www.accademia-arche.it/wp-content/uploads/2021/12/DSC_0194-672x372.jpg",
+    "titleProfessionisti": "I professionisti",
+    "professionisti": [
+      {
+        "nome": "Dott. Federico Ghio",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/DSC_0591-683x1024.jpg",
+        "skills": [
+          "Direttore dello Studio",
+          "Direttore Didattico",
+          "Direttore Tecnico Attività",
+          "Direttore Dipartimento Dos-Dbn Piemonte",
+          "Laureato in Scienze Motorie (Magistrale)",
+          "Osteopata Dos-Dbn",
+          "Chinesiologo",
+          "Kinesiologo",
+          "Docente di Scienze Osteopatiche Olistiche",
+          "Creatore del Metodo Integrato di Riequilibrio Olistico",
+          "Maestro V Dan di Goju Ryu Karate-Do",
+          "Docente di Karate Tradizionale Bionaturale"
+        ]
+      },
+      {
+        "nome": "Alessandra Caradonna",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/DSC_0606-1-865x1024.jpg",
+        "skills": [
+          "Massoterapista MCB",
+          "Massaggiatrice Olistica",
+          "Operatrice Discipline Olistiche per la Salute"
+        ]
+      },
+      {
+        "nome": "M. Cristina Pegoraro",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/DSC_0594-683x1024.jpg",
+        "skills": [
+          "Operatrice Discipline Olistiche per la Salute",
+          "Massaggiatrice Olistica"
+        ]
+      },
+      {
+        "nome": "Dott. Pierluigi Caramagna",
+        "image": "https://www.accademia-arche.it/wp-content/uploads/2024/01/Pier.jpg",
+        "skills": [
+          "Biologo",
+          "Naturopata"
+        ]
+      }
+    ]
+  }
 }

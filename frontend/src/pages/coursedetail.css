@@ -62,8 +62,17 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  max-width: 640px;
+}
+
+.container-item-coursedetail img {
+  max-width: 100%;
 }
 
 .button-submit-coursedetail {
   margin-top: 2rem;
+}
+
+.course-price {
+  font-weight: bold;
 }

@@ -1,13 +1,21 @@
 .download-card {
-    border-radius: 5px;
-    border: 1px solid black;
-    width: fit-content;
-    height: fit-content;
-    padding: 2rem;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 2rem;
+  max-width: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.download-card:hover {
+  box-shadow: 0px 0px 50px 0px rgba(24, 24, 24, 0.07);
 }
 
 .download-button {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
 }
